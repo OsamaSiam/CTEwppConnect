@@ -84,7 +84,6 @@ export class SenderLayer extends ListenerLayer {
    *
    * // With buttons
    * client.sendText('<number>@c.us', 'A simple message with buttons', {
-   *    useTemplateButtons: true, // False for legacy
    *    buttons: [
    *      {
    *        id: 'your custom id 1',

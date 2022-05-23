@@ -139,7 +139,6 @@ export async function injectApi(page: Page) {
   await page
     .evaluate(() => {
       WPP.chat.defaultSendMessageOptions.createChat = true;
-      WPP.conn.setKeepAlive(true);
     })
     .catch(() => false);
   await page.addScriptTag({
