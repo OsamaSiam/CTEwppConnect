@@ -1,0 +1,6 @@
+2022/05/19-13:19:09.506 41fc Reusing MANIFEST C:\wpp\tokens\CTEsession\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/05/19-13:19:09.506 41fc Recovering log #3
+2022/05/19-13:19:09.556 41fc Reusing old log C:\wpp\tokens\CTEsession\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000003.log 
+2022/05/19-13:19:11.801 10d4 Level-0 table #5: started
+2022/05/19-13:19:11.826 10d4 Level-0 table #5: 1104272 bytes OK
+2022/05/19-13:19:11.830 10d4 Delete type=0 #3
