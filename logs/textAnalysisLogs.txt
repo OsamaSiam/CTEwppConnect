@@ -1,0 +1,845 @@
+testing message {
+  id: 'false_966541199915@c.us_5BF0B5798D1C4C53203D6F5E4D9A3D3A',
+  body: 'Ho',
+  type: 'chat',
+  t: 1652877512,
+  notifyName: 'osama siam',
+  from: '966541199915@c.us',
+  to: '966568029136@c.us',
+  self: 'in',
+  ack: 1,
+  isNewMsg: true,
+  star: false,
+  recvFresh: true,
+  isFromTemplate: false,
+  broadcast: false,
+  mentionedJidList: [],
+  isVcardOverMmsDocument: false,
+  isForwarded: false,
+  hasReaction: false,
+  ephemeralOutOfSync: false,
+  productHeaderImageRejected: false,
+  lastPlaybackProgress: 0,
+  isDynamicReplyButtonsMsg: false,
+  isMdHistoryMsg: false,
+  requiresDirectConnection: false,
+  pttForwardedFeaturesEnabled: true,
+  chatId: '966541199915@c.us',
+  fromMe: false,
+  sender: {
+    id: '966541199915@c.us',
+    name: 'Osama Siam',
+    shortName: 'Osama',
+    pushname: 'osama siam',
+    type: 'in',
+    isBusiness: false,
+    isEnterprise: false,
+    isContactSyncCompleted: 1,
+    formattedName: 'Osama Siam',
+    isMe: false,
+    isMyContact: true,
+    isPSA: false,
+    isUser: true,
+    isWAContact: true,
+    profilePicThumbObj: { eurl: null, id: '966541199915@c.us', raw: null, tag: null },
+    msgs: null
+  },
+  timestamp: 1652877512,
+  content: 'Ho',
+  isGroupMsg: false,
+  isMedia: false,
+  isNotification: false,
+  isPSA: false,
+  mediaData: {}
+}
+testing message {
+  id: 'false_966541199915@c.us_EA7F7E56A4C3D9CD367CC62E0B827058',
+  body: 'Some text',
+  type: 'template_button_reply',
+  t: 1652877603,
+  notifyName: 'osama siam',
+  from: '966541199915@c.us',
+  to: '966568029136@c.us',
+  self: 'in',
+  ack: 1,
+  isNewMsg: true,
+  star: false,
+  recvFresh: true,
+  isFromTemplate: false,
+  broadcast: false,
+  quotedMsg: {
+    type: 'chat',
+    isFromTemplate: true,
+    body: 'A simple message with buttons',
+    hydratedButtons: [ [Object], [Object], [Object] ],
+    caption: 'A simple message with buttons',
+    footer: 'Footer text',
+    title: 'Title text'
+  },
+  quotedStanzaID: '3EB0E32182E283284954',
+  quotedParticipant: '966568029136@c.us',
+  mentionedJidList: [],
+  selectedId: 'your custom id 1',
+  selectedIndex: 0,
+  isVcardOverMmsDocument: false,
+  hasReaction: false,
+  ephemeralOutOfSync: false,
+  productHeaderImageRejected: false,
+  lastPlaybackProgress: 0,
+  isDynamicReplyButtonsMsg: false,
+  isMdHistoryMsg: false,
+  requiresDirectConnection: false,
+  pttForwardedFeaturesEnabled: true,
+  chatId: '966541199915@c.us',
+  fromMe: false,
+  sender: {
+    id: '966541199915@c.us',
+    name: 'Osama Siam',
+    shortName: 'Osama',
+    pushname: 'osama siam',
+    type: 'in',
+    isBusiness: false,
+    isEnterprise: false,
+    isContactSyncCompleted: 1,
+    formattedName: 'Osama Siam',
+    isMe: false,
+    isMyContact: true,
+    isPSA: false,
+    isUser: true,
+    isWAContact: true,
+    profilePicThumbObj: { eurl: null, id: '966541199915@c.us', raw: null, tag: null },
+    msgs: null
+  },
+  timestamp: 1652877603,
+  content: 'Some text',
+  isGroupMsg: false,
+  isMedia: false,
+  isNotification: false,
+  isPSA: false,
+  quotedMsgId: 'true_966541199915@c.us_3EB0E32182E283284954',
+  mediaData: {}
+}
+On 5/11/2022 11:56:46 PMThe conclusion: contact, Based on the following keywords: المهندس
+ From this text:  ابغى رقم المهندس عبدالله  
+On 5/12/2022 12:00:13 AMThe conclusion: Unknown, Based on the following keywords: ,Who,is,this?,
+ From this text:  Who is this? 
+On 5/12/2022 3:22:53 AM, The conclusion: Unknown, Based on the following keywords: .
+ From this text: .
+On 5/12/2022 3:23:32 AM, The conclusion: Unknown, Based on the following keywords: Hi
+ From this text: Hi
+On 5/12/2022 3:25:26 AM, The conclusion: Unknown, Based on the following keywords: What
+ From this text: What
+On 5/12/2022 3:25:44 AM, The conclusion: Unknown, Based on the following keywords: Contact
+ From this text: Contact
+On 5/12/2022 3:26:15 AM, The conclusion: Unknown, Based on the following keywords: Do
+ From this text: Do
+On 5/12/2022 3:27:21 AM, The conclusion: Unknown, Based on the following keywords: Whay
+ From this text: Whay
+On 5/12/2022 3:30:04 AM, The conclusion: Unknown, Based on the following keywords: .
+ From this text: .
+On 5/12/2022 3:30:20 AM, The conclusion: greeting, Based on the following keywords: hi
+ From this text: Hi
+On 5/12/2022 3:31:07 AM, The conclusion: Unknown, Based on the following keywords: what
+ From this text: What
+On 5/12/2022 3:31:14 AM, The conclusion: greeting, Based on the following keywords: hello
+ From this text: Hello
+On 5/12/2022 3:31:20 AM, The conclusion: add, Based on the following keywords: adding
+ From this text: Adding
+On 5/12/2022 3:31:23 AM, The conclusion: remove, Based on the following keywords: removal
+ From this text: Removal
+On 5/12/2022 3:32:57 AM, The conclusion: Unknown, Based on the following keywords: .
+ From this text: .
+On 5/12/2022 3:36:15 AM, The conclusion: Unknown, Based on the following keywords: .
+ From this text: .
+On 5/12/2022 3:36:28 AM, The conclusion: greeting, Based on the following keywords: hi
+ From this text: Hi
+On 5/12/2022 3:39:37 AM, The conclusion: Unknown, Based on the following keywords: .
+ From this text: .
+On 5/12/2022 3:39:57 AM, The conclusion: Unknown, Based on the following keywords: .
+ From this text: .
+On 5/12/2022 3:40:01 AM, The conclusion: greeting, Based on the following keywords: hi
+ From this text: Hi
+On 5/12/2022 3:44:27 AM, The conclusion: Unknown, Based on the following keywords: *add,ass*
+ From this text: *add ass*
+On 5/12/2022 3:46:30 AM, The conclusion: Unknown, Based on the following keywords: ```helo```
+ From this text: ```helo```
+On 5/12/2022 3:46:44 AM, The conclusion: Unknown, Based on the following keywords: *hello*
+ From this text: *hello*
+On 5/12/2022 3:46:57 AM, The conclusion: Unknown, Based on the following keywords: ```hello```
+ From this text: ```Hello```
+On 5/12/2022 3:47:03 AM, The conclusion: greeting, Based on the following keywords: hello
+ From this text: hello
+On 5/12/2022 4:06:54 AM, The conclusion: greeting, Based on the following keywords: hi
+ From this text: Hi
+On 5/12/2022 4:07:54 AM, The conclusion: greeting, Based on the following keywords: hi
+ From this text: Hi
+On 5/12/2022 4:08:12 AM, The conclusion: greeting, Based on the following keywords: hi
+ From this text: Hi
+On 5/12/2022 4:11:49 AM, The conclusion: greeting, Based on the following keywords: hi
+ From this text: Hi
+On 5/12/2022 4:11:58 AM, The conclusion: greeting, Based on the following keywords: hi
+ From this text: Hi
+On 5/12/2022 12:11:12 PM, The conclusion: greeting, Based on the following keywords: hi
+ From this text: Hi
+On 5/12/2022 12:11:26 PM, The conclusion: greeting, Based on the following keywords: hi
+ From this text: Hi
+On 5/12/2022 12:18:50 PM, The conclusion: greeting, Based on the following keywords: hello
+ From this text: Hello
+On 5/12/2022 12:18:50 PM, The conclusion: Unknown, Based on the following keywords: can,you,hear,me
+ From this text: Can you hear me
+On 5/12/2022 12:18:50 PM, The conclusion: Unknown, Based on the following keywords: وببنن
+ From this text: وببنن
+On 5/12/2022 12:19:05 PM, The conclusion: add, Based on the following keywords: اضيف
+ From this text: ابغى اضيف مادة
+On 5/12/2022 12:19:23 PM, The conclusion: add, Based on the following keywords: add
+ From this text: Add subject
+On 5/12/2022 12:19:36 PM, The conclusion: Unknown, Based on the following keywords: كفووو
+ From this text: كفووو
+On 5/12/2022 12:19:56 PM, The conclusion: remove, Based on the following keywords: remove
+ From this text: Remove subjects
+On 5/15/2022 11:31:35 PM, The conclusion: greeting, From: :966541199915Based on the following keywords: hi
+ From this text: Hi
+On 5/15/2022 11:31:44 PM, The conclusion: greeting, From: :966541199915Based on the following keywords: hi
+ From this text: Hi
+On 5/15/2022 11:33:15 PM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/15/2022 11:37:26 PM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/15/2022 11:38:26 PM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/15/2022 11:38:33 PM, The conclusion: remove, From: :966541199915Based on the following keywords: remove
+ From this text: Remove
+On 5/15/2022 11:38:39 PM, The conclusion: letter, From: :966541199915Based on the following keywords: letter
+ From this text: Letter
+On 5/15/2022 11:39:07 PM, The conclusion: Unknown, From: :966541199915Based on the following keywords: ...
+ From this text: ...
+On 5/15/2022 11:41:47 PM, The conclusion: greeting, From: :966541199915Based on the following keywords: سلام
+ From this text: سلام
+On 5/15/2022 11:45:07 PM, The conclusion: greeting, From: :966541199915Based on the following keywords: سلام
+ From this text: سلام
+On 5/15/2022 11:47:21 PM, The conclusion: greeting, From: :966541199915Based on the following keywords: السلام
+ From this text: السلام عليكم
+On 5/15/2022 11:48:48 PM, The conclusion: Unknown, From: :966541199915Based on the following keywords: هاا
+ From this text: هاا
+On 5/15/2022 11:48:51 PM, The conclusion: greeting, From: :966541199915Based on the following keywords: هلا
+ From this text: هلا
+On 5/15/2022 11:52:41 PM, The conclusion: Unknown, From: :966541199915Based on the following keywords: اهلا
+ From this text: اهلا
+On 5/15/2022 11:55:35 PM, The conclusion: Unknown, From: :966541199915Based on the following keywords: اهلا
+ From this text: اهلا
+On 5/16/2022 12:23:15 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/16/2022 12:24:51 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/16/2022 12:24:57 AM, The conclusion: letter, From: :966541199915Based on the following keywords: letter
+ From this text: Letter
+On 5/16/2022 12:27:16 AM, The conclusion: letter, From: :966541199915Based on the following keywords: letter
+ From this text: Letter
+On 5/16/2022 12:27:27 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/16/2022 12:28:23 AM, The conclusion: remove, From: :966541199915Based on the following keywords: remove
+ From this text: Remove
+On 5/16/2022 12:32:33 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/16/2022 12:32:42 AM, The conclusion: letter, From: :966541199915Based on the following keywords: letter
+ From this text: Letter
+On 5/16/2022 12:32:49 AM, The conclusion: contact, From: :966541199915Based on the following keywords: contact
+ From this text: Contact
+On 5/16/2022 12:33:52 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: السلام
+ From this text: السلام
+On 5/16/2022 12:34:53 AM, The conclusion: letter, From: :966541199915Based on the following keywords: خطاب
+ From this text: ابغى اطلب خطاب
+On 5/16/2022 12:35:04 AM, The conclusion: Unknown, From: :966541199915Based on the following keywords: كيف,اوصل,للمهندس
+ From this text: كيف اوصل للمهندس
+On 5/16/2022 12:35:33 AM, The conclusion: Unknown, From: :966541199915Based on the following keywords: كيف,اوصل,للمهندس
+ From this text: كيف اوصل للمهندس
+On 5/16/2022 12:37:05 AM, The conclusion: contact, From: :966541199915Based on the following keywords: اتواصل
+ From this text: كيف اتواصل مع المهندس؟
+On 5/16/2022 12:37:18 AM, The conclusion: Unknown, From: :966541199915Based on the following keywords: وصل,مهندس
+ From this text: وصل مهندس
+On 5/16/2022 12:37:25 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: هلا
+ From this text: هلا
+On 5/16/2022 12:37:57 AM, The conclusion: contact, From: :966541199915Based on the following keywords: مكتب,المهندس
+ From this text: فين مكتب المهندس
+On 5/16/2022 12:38:09 AM, The conclusion: Unknown, From: :966541199915Based on the following keywords: نو
+ From this text: نو
+On 5/16/2022 12:40:24 AM, The conclusion: Unknown, From: :966541199915Based on the following keywords: بو
+ From this text: بو
+On 5/16/2022 12:41:48 AM, The conclusion: Unknown, From: :966541199915Based on the following keywords: فو
+ From this text: فو
+On 5/16/2022 12:43:20 AM, The conclusion: unknown, From: :966541199915Based on the following keywords: ولا,مو
+ From this text: ولا مو
+On 5/16/2022 12:44:36 AM, The conclusion: add, From: :966541199915Based on the following keywords: اضيف
+ From this text: اضيف مادة
+On 5/16/2022 12:53:05 AM, The conclusion: unknown, From: :966541199915Based on the following keywords: تو
+ From this text: تو
+On 5/16/2022 12:53:15 AM, The conclusion: unknown, From: :966541199915Based on the following keywords: تو
+ From this text: تو
+On 5/16/2022 12:56:22 AM, The conclusion: unknown, From: :966541199915Based on the following keywords: نو
+ From this text: نو
+On 5/16/2022 1:00:09 AM, The conclusion: unknown, From: :966541199915Based on the following keywords: موي
+ From this text: موي
+On 5/16/2022 1:00:18 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hi
+ From this text: Hi
+On 5/16/2022 1:00:46 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 1:03:29 AM, The conclusion: unknown, From: :966541199915Based on the following keywords: lad
+ From this text: Lad
+On 5/16/2022 1:03:34 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 1:04:31 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hi
+ From this text: Hi
+On 5/16/2022 1:04:38 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 1:23:04 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/16/2022 1:23:08 AM, The conclusion: letter, From: :966541199915Based on the following keywords: letter
+ From this text: Letter
+On 5/16/2022 1:23:12 AM, The conclusion: contact, From: :966541199915Based on the following keywords: contact
+ From this text: Contact
+On 5/16/2022 1:23:19 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:13:47 AM, The conclusion: unknown, From: :966541199915Based on the following keywords: buddy
+ From this text: Buddy
+On 5/16/2022 2:13:52 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hi
+ From this text: Hi
+On 5/16/2022 2:13:55 AM, The conclusion: letter, From: :966541199915Based on the following keywords: letter
+ From this text: Letter
+On 5/16/2022 2:14:02 AM, The conclusion: contact, From: :966541199915Based on the following keywords: contact
+ From this text: Contact
+On 5/16/2022 2:14:13 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:14:53 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/16/2022 2:19:30 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:20:49 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/16/2022 2:20:53 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:22:39 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:24:36 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:29:41 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:30:47 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:32:26 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:33:23 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:34:53 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:37:40 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:39:22 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:40:21 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:42:40 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:43:46 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:45:53 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:47:22 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:48:52 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:49:57 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:50:51 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:52:01 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 2:56:58 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 3:03:48 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 3:05:27 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 3:07:34 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 3:09:01 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 3:10:42 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 3:12:03 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 3:12:19 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hi
+ From this text: Hi
+On 5/16/2022 3:13:07 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hi
+ From this text: Hi
+On 5/16/2022 3:13:18 AM, The conclusion: contact, From: :966541199915Based on the following keywords: contact
+ From this text: Contact
+On 5/16/2022 3:13:27 AM, The conclusion: letter, From: :966541199915Based on the following keywords: letter
+ From this text: Letter
+On 5/16/2022 3:13:40 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/16/2022 3:13:46 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 3:13:51 AM, The conclusion: remove, From: :966541199915Based on the following keywords: remove
+ From this text: Remove
+On 5/16/2022 3:15:29 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hi
+ From this text: Hi
+On 5/16/2022 3:15:34 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/16/2022 3:15:40 AM, The conclusion: remove, From: :966541199915Based on the following keywords: remove
+ From this text: Remove
+On 5/17/2022 4:08:13 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/17/2022 4:08:46 AM, The conclusion: unknown, From: :966541199915Based on the following keywords: where,can,i,find,trainer
+ From this text: Where can I find trainer
+On 5/17/2022 4:09:14 AM, The conclusion: contact, From: :966541199915Based on the following keywords: office
+ From this text: Where can I find the trainer office
+On 5/17/2022 4:11:37 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/17/2022 4:11:50 AM, The conclusion: contact, From: :966541199915Based on the following keywords: مكتب,المهندس
+ From this text: فين مكتب المهندس
+On 5/17/2022 4:16:33 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/17/2022 4:19:51 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/17/2022 4:20:01 AM, The conclusion: contact, From: :966541199915Based on the following keywords: office
+ From this text: Office
+On 5/17/2022 4:20:13 AM, The conclusion: letter, From: :966541199915Based on the following keywords: letter
+ From this text: Letter
+On 5/17/2022 4:20:20 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/17/2022 4:22:52 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/17/2022 4:27:15 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/17/2022 4:29:11 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/17/2022 4:31:57 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/17/2022 4:33:20 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/17/2022 5:15:02 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: السلام
+ From this text: السلام عليكم
+On 5/17/2022 5:15:06 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/17/2022 5:16:07 AM, The conclusion: remove, From: :966541199915Based on the following keywords: remove
+ From this text: Remove
+On 5/17/2022 6:35:31 AM, The conclusion: unknown, From: :966541199915Based on the following keywords: yo
+ From this text: Yo
+On 5/17/2022 6:35:48 AM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/17/2022 6:36:02 AM, The conclusion: add, From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/17/2022 6:36:16 AM, The conclusion: remove, From: :966541199915Based on the following keywords: remove
+ From this text: Remove subject
+On 5/17/2022 3:34:04 PM, The conclusion: greeting, From: :966541199915Based on the following keywords: hello
+ From this text: Hello
+On 5/17/2022 3:34:10 PM, The conclusion: add, , From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/17/2022 3:36:01 PM, The conclusion: letter, From: :966541199915Based on the following keywords: letter
+ From this text: Letter
+On 5/17/2022 3:36:07 PM, The conclusion: add, , From: :966541199915Based on the following keywords: add
+ From this text: Add
+On 5/17/2022 3:38:03 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/17/2022 3:38:14 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add subject
+On 5/17/2022 3:39:40 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/17/2022 3:45:24 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/17/2022 3:45:41 PM, The conclusion: unknown, From: :966541199915 Based on the following keywords: remoce,iner343
+ From this text: Remoce iner343
+On 5/17/2022 3:46:09 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet343
+On 5/17/2022 3:49:39 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/17/2022 3:49:45 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/17/2022 3:50:07 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/17/2022 3:51:34 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add inet343
+On 5/17/2022 3:54:11 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add inet343
+On 5/17/2022 3:54:42 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 3:59:47 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 5/17/2022 4:00:01 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add subject
+On 5/17/2022 4:00:14 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove module
+On 5/17/2022 4:00:26 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 4:02:03 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 4:04:09 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 4:06:46 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 4:08:05 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 4:10:49 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 4:12:44 PM, The conclusion: remove, inet434, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 4:12:58 PM, The conclusion: unknown, From: :966541199915 Based on the following keywords: 😫
+ From this text: 😫
+On 5/17/2022 4:13:47 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434 and insa484
+On 5/17/2022 4:35:27 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/17/2022 4:35:34 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add subject
+On 5/17/2022 4:35:42 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove subject
+On 5/17/2022 4:35:46 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 4:36:20 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434 and insa484
+On 5/17/2022 4:37:33 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434 and insa484
+On 5/17/2022 4:38:35 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434 and insa484
+On 5/17/2022 4:42:17 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434 and insa484
+On 5/17/2022 4:45:45 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434 and insa484
+On 5/17/2022 4:47:37 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/17/2022 4:47:44 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add subject
+On 5/17/2022 4:47:47 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/17/2022 4:47:54 PM, The conclusion: contact, From: :966541199915 Based on the following keywords: contact
+ From this text: Contact
+On 5/17/2022 4:47:58 PM, The conclusion: letter, From: :966541199915 Based on the following keywords: letter
+ From this text: Letter
+On 5/17/2022 4:48:14 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 4:53:35 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 4:54:32 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 4:58:00 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434 and insa484
+On 5/17/2022 5:05:48 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/17/2022 5:06:02 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434 and insa484
+On 5/18/2022 2:01:11 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: يو
+ From this text: يو
+On 5/18/2022 2:02:22 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: yo
+ From this text: Yo
+On 5/18/2022 2:03:51 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: yo
+ From this text: Yo
+On 5/18/2022 2:04:16 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: yo
+ From this text: Yo
+On 5/18/2022 2:06:59 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: yo
+ From this text: Yo
+On 5/18/2022 2:47:08 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: boo
+ From this text: Boo
+On 5/18/2022 2:51:28 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: boo
+ From this text: Boo
+On 5/18/2022 2:51:42 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: boo
+ From this text: Boo
+On 5/18/2022 2:53:01 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: boo
+ From this text: Boo
+On 5/18/2022 2:55:12 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: bbooo
+ From this text: Bbooo
+On 5/18/2022 2:57:34 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: y
+ From this text: Y
+On 5/18/2022 2:59:48 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: yo
+ From this text: Yo
+On 5/18/2022 2:59:51 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: do
+ From this text: Do
+On 5/18/2022 3:00:59 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: to
+ From this text: To
+On 5/18/2022 3:01:02 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: do
+ From this text: Do
+On 5/18/2022 3:04:14 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: go
+ From this text: Go
+On 5/18/2022 3:04:21 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: go
+ From this text: Go
+On 5/18/2022 3:05:53 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: vo
+ From this text: Vo
+On 5/18/2022 3:21:11 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: foo
+ From this text: Foo
+On 5/18/2022 3:21:15 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: bar
+ From this text: Bar
+On 5/18/2022 3:23:32 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: foo
+ From this text: Foo
+On 5/18/2022 3:23:38 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: bar
+ From this text: Bar
+On 5/18/2022 3:23:53 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: foo
+ From this text: Foo
+On 5/18/2022 3:24:55 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: intro
+ From this text: Intro
+On 5/18/2022 3:25:01 AM, The conclusion: unknown, From: :966541199915 Based on the following keywords: bar
+ From this text: Bar
+On 5/18/2022 3:25:06 AM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/18/2022 1:40:58 PM, The conclusion: unknown, From: :966541199915 Based on the following keywords: ao
+ From this text: Ao
+On 5/18/2022 1:41:04 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/18/2022 1:41:15 PM, The conclusion: contact, From: :966541199915 Based on the following keywords: contact
+ From this text: Contact
+On 5/18/2022 1:41:23 PM, The conclusion: letter, From: :966541199915 Based on the following keywords: letter
+ From this text: Letter
+On 5/18/2022 1:41:45 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/18/2022 1:41:54 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/18/2022 1:42:03 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/18/2022 1:42:11 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/18/2022 1:42:19 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/18/2022 1:42:27 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/18/2022 1:42:37 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: add
+ From this text: Add inet434
+On 5/18/2022 2:21:29 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/18/2022 2:23:11 PM, The conclusion: unknown, From: :966541199915 Based on the following keywords: yo
+ From this text: Yo
+On 5/18/2022 2:34:57 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/18/2022 6:17:37 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 5/18/2022 6:17:44 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/18/2022 6:17:55 PM, The conclusion: unknown, From: :966541199915 Based on the following keywords: how,are,you
+ From this text: How are you
+On 5/18/2022 6:18:33 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/18/2022 6:19:44 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/18/2022 6:19:51 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/18/2022 6:20:01 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 5/18/2022 6:22:46 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 5/18/2022 6:22:50 PM, The conclusion: unknown, From: :966541199915 Based on the following keywords: yo
+ From this text: Yo
+On 5/18/2022 6:23:03 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/18/2022 6:23:09 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/18/2022 6:27:32 PM, The conclusion: unknown, From: :966541199915 Based on the following keywords: cte
+ From this text: Cte
+On 5/18/2022 6:27:35 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/18/2022 6:27:37 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 5/18/2022 6:27:42 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/18/2022 6:27:48 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: add
+ From this text: Add inet434
+On 5/18/2022 6:27:57 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/18/2022 6:31:24 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/18/2022 6:32:38 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/18/2022 6:43:48 PM, The conclusion: unknown, From: :966541199915 Based on the following keywords: #10
+ From this text: #10
+On 5/18/2022 10:16:03 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/18/2022 10:16:37 PM, The conclusion: letter, From: :966541199915 Based on the following keywords: letter
+ From this text: Letter
+On 5/18/2022 10:17:05 PM, The conclusion: contact, From: :966541199915 Based on the following keywords: contact
+ From this text: Contact
+On 5/18/2022 10:17:09 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/18/2022 10:17:16 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/18/2022 10:17:35 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet343
+On 5/18/2022 10:18:00 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/18/2022 10:20:29 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/18/2022 10:23:34 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/18/2022 10:53:26 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/18/2022 10:53:49 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 5/18/2022 10:54:42 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/18/2022 10:54:42 PM, The conclusion: unknown, From: :966541199915 Based on the following keywords: yo
+ From this text: Yo
+On 5/18/2022 10:54:42 PM, The conclusion: contact, From: :966541199915 Based on the following keywords: contact
+ From this text: Contact
+On 5/19/2022 2:06:17 AM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/19/2022 2:06:31 AM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/19/2022 2:06:52 AM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 2:25:56 AM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/19/2022 2:26:12 AM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 2:40:56 AM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/19/2022 2:41:09 AM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 2:42:58 AM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 2:45:14 AM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 2:46:49 AM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 2:51:57 AM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 2:54:37 AM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 2:58:25 AM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 3:00:21 AM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 3:01:32 AM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 1:26:51 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 1:31:54 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 1:33:45 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 1:35:55 PM, The conclusion: contact, From: :966541199915 Based on the following keywords: contact
+ From this text: Contact
+On 5/19/2022 1:36:15 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/19/2022 1:36:23 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/19/2022 1:36:33 PM, The conclusion: letter, From: :966541199915 Based on the following keywords: letter
+ From this text: Letter
+On 5/19/2022 1:36:43 PM, The conclusion: list, From: :966541199915 Based on the following keywords: list
+ From this text: List
+On 5/19/2022 1:36:53 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: #12
+ From this text: #12
+On 5/19/2022 1:37:37 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: add
+ From this text: Add Inet434
+On 5/19/2022 1:38:02 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 1:48:21 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 1:50:49 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 1:58:59 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 1:59:18 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 5/19/2022 1:59:35 PM, The conclusion: unknown, From: :966541199915 Based on the following keywords: ho
+ From this text: Ho
+On 5/19/2022 1:59:52 PM, The conclusion: letter, From: :966541199915 Based on the following keywords: letter
+ From this text: I asking about a letter
+On 5/19/2022 2:00:28 PM, The conclusion: contact, From: :966541199915 Based on the following keywords: contact
+ From this text: Contact
+On 5/19/2022 2:00:32 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/19/2022 2:00:36 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/19/2022 2:00:48 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 2:01:36 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/19/2022 2:01:42 PM, The conclusion: list, From: :966541199915 Based on the following keywords: list
+ From this text: List
+On 5/19/2022 2:02:10 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: #1
+ From this text: #1
+On 5/19/2022 2:08:14 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 2:08:25 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add subjects
+On 5/19/2022 2:08:33 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove subjects
+On 5/19/2022 2:08:39 PM, The conclusion: letter, From: :966541199915 Based on the following keywords: letter
+ From this text: Letter
+On 5/19/2022 2:09:09 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 2:09:30 PM, The conclusion: contact, From: :966541199915 Based on the following keywords: contact
+ From this text: Contact
+On 5/19/2022 2:09:43 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove inet434
+On 5/19/2022 2:14:52 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 2:14:58 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 5/19/2022 2:15:01 PM, The conclusion: unknown, From: :966541199915 Based on the following keywords: no
+ From this text: No
+On 5/19/2022 2:15:07 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/19/2022 2:15:10 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/19/2022 2:15:19 PM, The conclusion: letter, From: :966541199915 Based on the following keywords: letter
+ From this text: Letter
+On 5/19/2022 2:15:22 PM, The conclusion: list, From: :966541199915 Based on the following keywords: list
+ From this text: List
+On 5/19/2022 2:15:40 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: #2
+ From this text: #2
+On 5/19/2022 2:56:22 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 2:56:39 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove Inet434
+On 5/19/2022 2:58:38 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove Inet434
+On 5/19/2022 2:59:11 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/19/2022 2:59:27 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: add
+ From this text: Add Inet434
+On 5/19/2022 3:00:39 PM, The conclusion: list, From: :966541199915 Based on the following keywords: list
+ From this text: List
+On 5/19/2022 3:01:49 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: #10
+ From this text: #10
+On 5/19/2022 3:04:41 PM, The conclusion: list, From: :966541199915 Based on the following keywords: list
+ From this text: List
+On 5/19/2022 3:04:57 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: #10
+ From this text: #10
+On 5/19/2022 3:08:07 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: #10
+ From this text: #10
+On 5/19/2022 3:10:45 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: #10
+ From this text: #10
+On 5/19/2022 3:12:30 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: #10
+ From this text: #10
+On 5/19/2022 3:17:24 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 3:17:32 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: #10
+ From this text: #10
+On 5/19/2022 3:19:29 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 4:28:58 PM, The conclusion: greeting, From: :966553676760 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 4:29:48 PM, The conclusion: greeting, From: :966553676760 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 4:30:37 PM, The conclusion: add, From: :966553676760 Based on the following keywords: add
+ From this text: Add subjects
+On 5/19/2022 4:30:49 PM, The conclusion: remove, From: :966553676760 Based on the following keywords: remove
+ From this text: Remove
+On 5/19/2022 4:31:16 PM, The conclusion: [object Object], From: :966553676760 Based on the following keywords: remove
+ From this text: Remove INSA492
+On 5/19/2022 4:34:48 PM, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 5/19/2022 4:35:24 PM, The conclusion: letter, From: :966541199915 Based on the following keywords: letter
+ From this text: Letter
+On 5/19/2022 4:35:46 PM, The conclusion: letter, From: :966541199915 Based on the following keywords: letter
+ From this text: Exam letter
+On 5/19/2022 4:35:58 PM, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 5/19/2022 4:36:10 PM, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove
+On 5/19/2022 4:36:17 PM, The conclusion: add, From: :966539090618 Based on the following keywords: add
+ From this text: Add subject
+On 5/19/2022 4:38:53 PM, The conclusion: [object Object], From: :966541199915 Based on the following keywords: remove
+ From this text: Remove insa492
+On 5/19/2022 4:41:50 PM, The conclusion: greeting, From: :966503779887 Based on the following keywords: hello
+ From this text: hello
+On 5/19/2022 4:44:06 PM, The conclusion: greeting, From: :966503779887 Based on the following keywords: السلام
+ From this text: السلام عليكم
+On 5/19/2022 4:44:06 PM, The conclusion: greeting, From: :966503779887 Based on the following keywords: hello
+ From this text: hello
