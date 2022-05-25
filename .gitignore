@@ -10,3 +10,4 @@ dist/
 gohan.jpg
 node_modules
 yarn.lock
+tokens/
