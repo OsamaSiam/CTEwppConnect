@@ -40,9 +40,9 @@ function start(client) {
         basicUserInfo = rows[0];
       })
       .then(() => {
-        if (basicUserInfo.user_type === 'trainee') {
-          basicUserInfo.user_type = basicUserInfo.user_type + 's'; //this (if) is only for this version becuase trainee stored in DB as "trinee"
-        }
+        // if (basicUserInfo.user_type === 'trainee') {
+        //   basicUserInfo.user_type = basicUserInfo.user_type + 's'; //this (if) is only for this version becuase trainee stored in DB as "trinee"
+        // }
         config.database = basicUserInfo.user_type;
         str_sql = str_sql.replace('users', 'id');
         let mydb = new Database(config);
