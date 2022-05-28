@@ -30,18 +30,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `record` (
   `request_id` int(8) UNSIGNED NOT NULL,
-  `status` varchar(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'Pending' COMMENT 'Pending, refused, or done',
-  `request_type` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'add or remove',
+  `status` varchar(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Pending' COMMENT 'Pending, refused, or done',
+  `request_type` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'add or remove',
   `item_requested` varchar(8) NOT NULL,
   `trainee_ID` varchar(12) NOT NULL,
   `trainee_name` varchar(150) NOT NULL,
   `group_ID` int(5) NOT NULL,
-  `staff_pending` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'advisor' COMMENT 'timetabler or advisor',
+  `staff_pending` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'advisor' COMMENT 'timetabler or advisor',
   `request_timestamp` timestamp(6) NOT NULL,
   `update_timestamp` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `reason` varchar(255) NOT NULL,
   `reply_reason` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `record`

@@ -37,7 +37,7 @@ CREATE TABLE `contact_info` (
   `office_no` int(4) NOT NULL,
   `office_hours` varchar(13) NOT NULL,
   `ext` int(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `contact_info`
@@ -58,14 +58,14 @@ CREATE TABLE `id` (
   `empolyee_ID` int(10) NOT NULL,
   `national_ID` int(10) NOT NULL,
   `ENfirst_name` varchar(50) NOT NULL,
-  `ENlast_name` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `ARfirst_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ENlast_name` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ARfirst_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `ARlast_name` varchar(25) NOT NULL,
   `phone_number` varchar(12) NOT NULL,
   `registered` tinyint(1) NOT NULL DEFAULT '0',
-  `role` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT 'timetabler or advisor',
+  `role` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'timetabler or advisor',
   `manage_group_ID` int(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `id`

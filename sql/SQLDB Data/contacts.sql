@@ -33,7 +33,7 @@ CREATE TABLE `users` (
   `user_type` varchar(7) NOT NULL,
   `college_ID` int(10) NOT NULL,
   `intro` tinyint(1) DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
