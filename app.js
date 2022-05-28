@@ -20,9 +20,9 @@ function start(client) {
         senderNumber = senderNumber.substring(0, 12);
         console.log('Phone Number is ' + senderNumber);
         var config = {
-            host: 'localhost',
-            user: 'wapAccess',
-            password: '123456',
+            host: '192.168.0.33',
+            user: 'phpAdmin',
+            password: 'Pa$$w0rd',
             database: 'contacts'
         };
         var str_sql = 'SELECT * FROM users WHERE phone_number = ' + senderNumber;
@@ -36,9 +36,6 @@ function start(client) {
             basicUserInfo = rows[0];
         })
             .then(function () {
-            // if (basicUserInfo.user_type === 'trainee') {
-            //     basicUserInfo.user_type = basicUserInfo.user_type + 's'; //this (if) is only for this version becuase trainee stored in DB as "trinee"
-            // }
             config.database = basicUserInfo.user_type;
             str_sql = str_sql.replace('users', 'id');
             var mydb = new Database(config);
@@ -46,7 +43,7 @@ function start(client) {
         })
             .then(function (rows) {
             additionalUserInfo = rows[0];
-            if (basicUserInfo.user_type === 'trainees') {
+            if (basicUserInfo.user_type === 'trainee') {
                 str_sql = str_sql.replace('id', 'academic');
                 str_sql = str_sql.replace('phone_number', 'academic_ID');
                 str_sql = str_sql.replace(senderNumber, basicUserInfo.college_ID);
@@ -63,6 +60,7 @@ function start(client) {
             if (rows) {
                 userAcademicRecords = rows[0];
                 userCourseSubjects = Object.keys(userAcademicRecords);
+                console.log('testing recording: ', userAcademicRecords);
                 config.database = 'staff';
                 var mydb_2 = new Database(config);
                 var staffList_str_sql = 'SELECT `ENfirst_name`, `ENlast_name`, `department`, `email`, `office_no`, `office_hours`, `ext` FROM `contact_info`';
@@ -79,9 +77,9 @@ function start(client) {
                     staffList.push(staffRecords[i].ENfirst_name + ' ' + staffRecords[i].ENlast_name);
                 }
             }
+            console.log("testing here:", userCourseSubjects);
             serviceRequested = analyzeText(message.body, senderNumber, basicUserInfo.user_type, userCourseSubjects, staffList);
             if (typeof serviceRequested === 'object') {
-                console.log('testing recording: ', serviceRequested);
                 config.database = 'requests';
                 var mydb_3 = new Database(config);
                 var record_sql = void 0;
@@ -180,13 +178,6 @@ function start(client) {
                     console.log('Error when updating first time usage: ', err.message);
                 });
             }
-        })
-            .then(function () {
-            return mydb.close();
-        }, function (err) {
-            return mydb.close().then(function () {
-                throw err;
-            });
         })["catch"](function (err) {
             // handle the error
             console.log(err.message);

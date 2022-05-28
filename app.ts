@@ -40,9 +40,6 @@ function start(client) {
         basicUserInfo = rows[0];
       })
       .then(() => {
-        // if (basicUserInfo.user_type === 'trainee') {
-        //   basicUserInfo.user_type = basicUserInfo.user_type + 's'; //this (if) is only for this version becuase trainee stored in DB as "trinee"
-        // }
         config.database = basicUserInfo.user_type;
         str_sql = str_sql.replace('users', 'id');
         let mydb = new Database(config);
@@ -50,7 +47,7 @@ function start(client) {
       })
       .then(rows => {
         additionalUserInfo = rows[0];
-        if (basicUserInfo.user_type === 'trainees') {
+        if (basicUserInfo.user_type === 'trainee') {
           str_sql = str_sql.replace('id', 'academic');
           str_sql = str_sql.replace('phone_number', 'academic_ID');
           str_sql = str_sql.replace(senderNumber, basicUserInfo.college_ID);
@@ -84,7 +81,6 @@ function start(client) {
         }
         serviceRequested = analyzeText(message.body, senderNumber, basicUserInfo.user_type, userCourseSubjects, staffList);
         if (typeof serviceRequested === 'object') {
-          console.log('testing recording: ', serviceRequested);
           config.database = 'requests';
           let mydb = new Database(config);
           let record_sql;
@@ -104,7 +100,7 @@ function start(client) {
                 'UPDATE record SET status = completed, staff_pending = NULL WHERE request_id = ' +
                 serviceRequested.itemRequested;
             } else if (serviceRequested.serviceRequested == 'requestInfo') {
-              if (basicUserInfo.user_type === 'trainees') {
+              if (basicUserInfo.user_type === 'trainee') {
                 record_sql =
                   'SELECT * FROM record WHERE trainee_ID = ' +
                   basicUserInfo.college_ID +
@@ -119,7 +115,7 @@ function start(client) {
               }
             }
           } else if(serviceRequested === 'list') {
-            if (basicUserInfo.user_type === 'trainees') {
+            if (basicUserInfo.user_type === 'trainee') {
               record_sql =
                 'SELECT * FROM record WHERE status = Pending AND trainee_ID = ' +
                 basicUserInfo.college_ID;
