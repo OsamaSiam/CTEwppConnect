@@ -25,7 +25,7 @@ function start(client) {
     console.log('Phone Number is ' + senderNumber);
     let config = {
       host: 'localhost',
-      user: 'Osama',
+      user: 'wapAccess',
       password: '123456',
       database: 'contacts',
     };
