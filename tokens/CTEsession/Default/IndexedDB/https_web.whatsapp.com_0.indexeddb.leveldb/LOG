@@ -1,16 +1,17 @@
-2022/05/19-16:34:28.618 4b38 Reusing MANIFEST C:\wpp\tokens\CTEsession\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/05/19-16:34:28.618 4b38 Recovering log #56
-2022/05/19-16:34:28.643 4b38 Reusing old log C:\wpp\tokens\CTEsession\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000056.log 
-2022/05/19-16:35:57.620 48c0 Level-0 table #63: started
-2022/05/19-16:35:57.714 48c0 Level-0 table #63: 1296810 bytes OK
-2022/05/19-16:35:57.720 48c0 Delete type=0 #56
-2022/05/19-16:35:58.782 2458 Compacting 1@1 + 3@2 files
-2022/05/19-16:35:58.863 2458 Generated table #64@1: 33088 keys, 2246935 bytes
-2022/05/19-16:35:58.944 2458 Generated table #65@1: 59457 keys, 2232167 bytes
-2022/05/19-16:35:58.995 2458 Generated table #66@1: 17280 keys, 323610 bytes
-2022/05/19-16:35:58.995 2458 Compacted 1@1 + 3@2 files => 4802712 bytes
-2022/05/19-16:35:58.999 2458 compacted to: files[ 0 0 3 0 0 0 0 ]
-2022/05/19-16:35:59.000 2458 Delete type=2 #58
-2022/05/19-16:35:59.000 2458 Delete type=2 #59
-2022/05/19-16:35:59.000 2458 Delete type=2 #60
-2022/05/19-16:35:59.000 2458 Delete type=2 #63
+2022/05/29-01:20:21.401 771c Reusing MANIFEST D:\cte\tokens\CTEsession\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/05/29-01:20:21.401 771c Recovering log #130
+2022/05/29-01:20:21.411 771c Reusing old log D:\cte\tokens\CTEsession\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000130.log 
+2022/05/29-01:20:21.411 771c Delete type=2 #127
+2022/05/29-01:20:21.411 771c Delete type=2 #128
+2022/05/29-01:20:21.411 771c Delete type=2 #131
+2022/05/29-01:30:24.798 22c8 Level-0 table #136: started
+2022/05/29-01:30:24.812 22c8 Level-0 table #136: 1254092 bytes OK
+2022/05/29-01:30:24.813 22c8 Delete type=0 #130
+2022/05/29-01:30:25.507 22c8 Compacting 1@1 + 2@2 files
+2022/05/29-01:30:25.545 22c8 Generated table #137@1: 39757 keys, 2246630 bytes
+2022/05/29-01:30:25.574 22c8 Generated table #138@1: 55306 keys, 1635108 bytes
+2022/05/29-01:30:25.574 22c8 Compacted 1@1 + 2@2 files => 3881738 bytes
+2022/05/29-01:30:25.574 22c8 compacted to: files[ 0 0 2 0 0 0 0 ]
+2022/05/29-01:30:25.574 22c8 Delete type=2 #132
+2022/05/29-01:30:25.574 22c8 Delete type=2 #133
+2022/05/29-01:30:25.574 22c8 Delete type=2 #136

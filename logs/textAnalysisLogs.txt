@@ -843,3 +843,25 @@ On 5/19/2022 4:44:06 PM, The conclusion: greeting, From: :966503779887 Based on 
  From this text: السلام عليكم
 On 5/19/2022 4:44:06 PM, The conclusion: greeting, From: :966503779887 Based on the following keywords: hello
  From this text: hello
+On 29/05/2022 01:01:07, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 29/05/2022 01:07:20, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 29/05/2022 01:07:24, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 29/05/2022 01:11:38, The conclusion: unknown, From: :966541199915 Based on the following keywords: yello
+ From this text: Yello
+On 29/05/2022 01:11:52, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 29/05/2022 01:16:34, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 29/05/2022 01:17:32, The conclusion: unknown, From: :966541199915 Based on the following keywords: heart
+ From this text: Heart
+On 29/05/2022 01:17:37, The conclusion: greeting, From: :966541199915 Based on the following keywords: hello
+ From this text: Hello
+On 29/05/2022 01:18:37, The conclusion: greeting, From: :966541199915 Based on the following keywords: hi
+ From this text: Hi
+On 29/05/2022 01:21:25, The conclusion: add, From: :966541199915 Based on the following keywords: add
+ From this text: Add
+On 29/05/2022 01:21:38, The conclusion: remove, From: :966541199915 Based on the following keywords: remove
+ From this text: Remove

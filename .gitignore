@@ -11,6 +11,6 @@ gohan.jpg
 node_modules/
 yarn.lock
 tokens/
-tokens/CTEsession
+tokens/CTEsession/
 google-chrome/
 logs/textAnalysisLogs.txt
