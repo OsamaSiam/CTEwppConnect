@@ -70,6 +70,12 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           'Kindly allow for some time to pass for approval.\n' +
           'You can check on the status of your request by typing (#) followed by the request ID.\n' +
           'Thank you for using our services';
+      } else if (serviceRequested.rejection === true) {
+        messageText =
+          'Apolgies, it seems your request was not recorded due to an error.\n' +
+          'Kindly make sure you have typed in the correct subject code or a subject that is available to be ' +
+          serviceRequested.serviceRequested +
+          '.\n Kindly send your request again.\n';
       } else {
         messageText =
           'Apolgies, it seems your request was not recorded due to an error.\n' +
