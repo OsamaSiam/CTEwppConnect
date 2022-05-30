@@ -141,7 +141,7 @@ function start(client) {
               additionalUserInfo.academic_ID + "', '" +
               additionalUserInfo.ENfirst_name + ' ' + additionalUserInfo.ENlast_name + "', '" +
               additionalUserInfo.group_ID + "', " +
-              "NOW(), 'reasons', NULL WHERE NOT EXISTS ( SELECT request_id FROM record WHERE status = pending AND request_type = '" +
+              "NOW(), 'reasons', NULL WHERE NOT EXISTS ( SELECT request_id FROM record WHERE status = 'pending' AND request_type = '" +
               serviceRequested.serviceRequested +
               "' AND item_requested = '" +
               serviceRequested.itemRequested +
