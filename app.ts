@@ -81,11 +81,11 @@ function start(client) {
         }
         serviceRequested = analyzeText(message.body, senderNumber, basicUserInfo.user_type, userCourseSubjects, staffList);
         if (typeof serviceRequested === 'object') {
-          if (userAcademicRecords[serviceRequested.itemRequested.toUpperCase()] !== 'N' && serviceRequested.serviceRequested === 'add') {
+          if (userAcademicRecords[serviceRequested.itemRequested] !== 'N' && serviceRequested.serviceRequested === 'add') {
             console.log('testing here adding rejetion');
             serviceRequested.rejection = true;
             return;
-          } else if (userAcademicRecords[serviceRequested.itemRequestedtoUpperCase()] !== 'C' && serviceRequested.serviceRequested === 'remove') {
+          } else if (userAcademicRecords[serviceRequested.itemRequested] !== 'C' && serviceRequested.serviceRequested === 'remove') {
             serviceRequested.rejection = true;
             console.log('testing here removing rejetion');
             return;
