@@ -1,6 +1,6 @@
 let diction = {
   MATH301: 'Mathematics-1',
-  PHY301: 'ppphysics',
+  PHYS301: 'ppphysics',
   ENGL301: 'Enlish Language-1',
   INSA312: 'Basic Networks System Administration',
   INSA351: 'Networ Technologies 1',
@@ -24,11 +24,25 @@ let diction = {
   INSA492: 'Graduation Project',
   IPRG335: 'Advanced Web Programming',
   INSA481: 'Selected Topics',
-  INSA444: 'Oopen Source Netowrk Systems',
+  INSA444: 'Open Source Netowrk Systems',
   IPRG473: 'Multimedia System Development',
   INET351: 'Communiation Networks',
   INSA485: 'Internet of Things',
 };
+let subjectPrerequiste = {
+  MATH303 : 'MATH301',
+  INSA371 : 'INSA312',
+  INSA452 : 'INSA351',
+  ENGL302 : 'ENGL301',
+  INSA453 : 'INSA371',
+  INET433 : 'INSA312',
+  INSA443 : 'INSA452',
+  INSA454 : 'INSA453',
+  INSA483 : 'INSA371',
+  INET434 : 'INET433',
+  INSA484 : ['INSA312', 'INSA351'],
+  INSA492 : ['INSA371', 'INSA452', 'INSA454', 'INSA483']
+}
 
 function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRecords, subjects) {
   return new Promise(resolve => {
@@ -82,7 +96,6 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           'Thank you for using our services';
         }
       } else if (serviceRequested.rejection === true) {
-        console.log('testing msgBuilder L74: ', serviceRequested.itemRequested);
         messageText =
           'The subject, *' +
           serviceRequested.itemRequested +
@@ -116,7 +129,24 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
       }
       for (let i = 1; i < subjects.length; i++) {
         if (academicRecords[subjects[i]] === academicFilterChar) {
-          filteredAcademicRecords.push(subjects[i]);
+          if (academicFilterChar === 'N') {
+            if(typeof subjectPrerequiste[subjects[i]] === 'object') {
+              let subjectsPassed = 0;
+              let specificSubjectReq = subjectPrerequiste[subjects[i]];
+              for( let i = 0; Object.values(specificSubjectReq).length > i; i++) {
+                  if (academicRecords[specificSubjectReq[i]] === 'P') {
+                      subjectsPassed++;
+                  }
+              }
+              if (Object.values(specificSubjectReq).length === subjectsPassed) {
+                  filteredAcademicRecords.push(subjects[i]);
+              }
+            } else if (academicRecords[subjectPrerequiste[subjects[i]]] === 'P') {
+              filteredAcademicRecords.push(subjects[i]);
+            }
+          } else {
+            filteredAcademicRecords.push(subjects[i]);
+          }
         }
       }
       // start testing removal of alternate subejcts
