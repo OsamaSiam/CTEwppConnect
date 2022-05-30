@@ -135,7 +135,7 @@ function start(client) {
             }
           } else if (['add', 'remove'].includes(serviceRequested.serviceRequested)) {
             record_sql =
-              "INSERT INTO record ( request_type, item_requested, trainee_ID, trainee_name, group_ID, request_timestamp, reason, reply_reson) SELECT '" +
+              "INSERT INTO record ( request_type, item_requested, trainee_ID, trainee_name, group_ID, request_timestamp, reason, reply_reason) SELECT '" +
               serviceRequested.serviceRequested + "', '" +
               serviceRequested.itemRequested + "', '" +
               additionalUserInfo.academic_ID + "', '" +
