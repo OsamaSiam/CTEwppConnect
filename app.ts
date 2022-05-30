@@ -135,19 +135,20 @@ function start(client) {
             }
           } else if (['add', 'remove'].includes(serviceRequested.serviceRequested)) {
             record_sql =
-              "IF NOT EXISTS ( SELECT request_id FROM record WHERE status = pending AND request_type = '" +
-              serviceRequested.serviceRequested +
-              "' AND item_requested = '" +
-              serviceRequested.itemRequested +
-              "' AND trainee_ID = '" +
-              additionalUserInfo.academic_ID +
-              "' ) BEGIN INSERT INTO record ( request_type, item_requested, trainee_ID, trainee_name, group_ID, request_timestamp, reason, reply_reson) VALUES ('" +
+              "INSERT INTO record ( request_type, item_requested, trainee_ID, trainee_name, group_ID, request_timestamp, reason, reply_reson) VALUES ('" +
               serviceRequested.serviceRequested + "', '" +
               serviceRequested.itemRequested + "', '" +
               additionalUserInfo.academic_ID + "', '" +
               additionalUserInfo.ENfirst_name + ' ' + additionalUserInfo.ENlast_name + "', '" +
               additionalUserInfo.group_ID + "', " +
-              "NOW(), 'reasons') END;" ; // variable reasons of request from trainee should inserted
+              'NOW(), ' +
+              "'reasons') WHERE NOT EXISTS ( SELECT request_id FROM record WHERE status = pending AND request_type = '" +
+              serviceRequested.serviceRequested +
+              "' AND item_requested = '" +
+              serviceRequested.itemRequested +
+              "' AND trainee_ID = '" +
+              additionalUserInfo.academic_ID +
+              "' );"; // variable reasons of request from trainee should inserted
           }
           console.log('testing recoer sql: ', record_sql);
           return mydb.query(record_sql);
