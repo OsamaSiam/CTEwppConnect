@@ -142,7 +142,7 @@ function start(client) {
               additionalUserInfo.ENfirst_name + ' ' + additionalUserInfo.ENlast_name + "', '" +
               additionalUserInfo.group_ID + "', " +
               'NOW(), ' +
-              "'reasons') WHERE NOT EXIST (SELECT request_id FROM record WHERE status = pending AND request_type = " +
+              "'reasons') WHERE NOT EXISTS (SELECT request_id FROM record WHERE status = pending AND request_type = " +
               serviceRequested.serviceRequested +
               " AND item_requested = " +
               serviceRequested.itemRequested +

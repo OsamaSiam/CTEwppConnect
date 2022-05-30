@@ -73,7 +73,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
       } else if (serviceRequested.rejection === true) {
         console.log('testing msgBuilder L74: ', serviceRequested.itemRequested);
         messageText =
-          'Apolgies, the subject, ' +
+          'Apologies, the subject, ' +
           serviceRequested.itemRequested +
           ': ' +
           diction[serviceRequested.itemRequested] +
