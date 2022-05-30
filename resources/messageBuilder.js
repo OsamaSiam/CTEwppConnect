@@ -63,21 +63,32 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
     } else if (typeof serviceRequested === 'object') {
       // this is if the add/remove request is correct and logged
       if (serviceRequested.recorded === true) {
-        messageText =
+        if (serviceRequested.requestID === 0) {
+          messageText = 
+          'You already have pending request to ' +
+          serviceRequested.serviceRequested +
+          'The subject, *' +
+          serviceRequested.itemRequested +
+          ': ' +
+          diction[serviceRequested.itemRequested] +
+          '*.\n Kindly send *List* to check pending requests.';
+        } else {
+          messageText =
           'Your request ID: *' +
           serviceRequested.requestID +
           '* has been recorded in our system.\n' +
           'Kindly allow for some time to pass for approval.\n' +
           'You can check on the status of your request by typing (#) followed by the request ID.\n' +
           'Thank you for using our services';
+        }
       } else if (serviceRequested.rejection === true) {
         console.log('testing msgBuilder L74: ', serviceRequested.itemRequested);
         messageText =
-          'Apologies, the subject, ' +
+          'The subject, *' +
           serviceRequested.itemRequested +
           ': ' +
           diction[serviceRequested.itemRequested] +
-          ', you have entered is not available to ' +
+          '*, you have entered is not available to ' +
           serviceRequested.serviceRequested +
           '.\n' +
           'Kindly make sure you have typed in the correct subject code or choose a subject that is *available to ' +
@@ -135,7 +146,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
             ' MATH301'
         );
       } else {
-        messageText = messageText.concat('*No subject can ', serviceRequested, 'ed.*\n');
+        messageText = messageText.concat('*No subject to ', serviceRequested, '.*\n');
       }
       resolve(messageText);
     } else if (serviceRequested === 'contact') {
