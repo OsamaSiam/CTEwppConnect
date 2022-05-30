@@ -71,6 +71,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           'You can check on the status of your request by typing (#) followed by the request ID.\n' +
           'Thank you for using our services';
       } else if (serviceRequested.rejection === true) {
+        console.log('testing msgBuilder L74: ', serviceRequested.itemRequested.toUppCase());
         messageText =
           'Apolgies, the subject, ' +
           serviceRequested.itemRequested.toUppCase() +
