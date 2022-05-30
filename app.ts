@@ -142,13 +142,13 @@ function start(client) {
               additionalUserInfo.ENfirst_name + ' ' + additionalUserInfo.ENlast_name + "', '" +
               additionalUserInfo.group_ID + "', " +
               'NOW(), ' +
-              "'reasons') WHERE NOT EXISTS (SELECT request_id FROM record WHERE status = pending AND request_type = " +
+              "'reasons') WHERE NOT EXISTS (SELECT request_id FROM record WHERE status = pending AND request_type = '" +
               serviceRequested.serviceRequested +
-              " AND item_requested = " +
+              "' AND item_requested = '" +
               serviceRequested.itemRequested +
-              " AND trainee_ID = " +
+              "' AND trainee_ID = '" +
               additionalUserInfo.academic_ID +
-              " )"; // variable reasons of request from trainee should inserted
+              "' )"; // variable reasons of request from trainee should inserted
           }
           console.log('testing recoer sql: ', record_sql);
           return mydb.query(record_sql);
