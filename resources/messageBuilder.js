@@ -72,13 +72,15 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           'Thank you for using our services';
       } else if (serviceRequested.rejection === true) {
         messageText =
-          'Apolgies, it seems your request was not recorded due to an error.\n' +
-          'Kindly make sure you have typed in the correct subject code or a subject that is available to be ' +
+          'Apolgies, the subject you have entered is not available to ' +
           serviceRequested.serviceRequested +
-          '.\n Kindly send your request again.\n';
+          '.\n' +
+          'Kindly make sure you have typed in the correct subject code or choose a subject that is *available to ' +
+          serviceRequested.serviceRequested +
+          '*.\n Kindly send your request again.';
       } else {
         messageText =
-          'Apolgies, it seems your request was not recorded due to an error.\n' +
+          'Apologies, it seems your request was not recorded due to an error.\n' +
           'Kindly send your request again.\n' +
           'Apoliges for any inconvience caused.';
       }
