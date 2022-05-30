@@ -82,11 +82,13 @@ function start(client) {
         serviceRequested = analyzeText(message.body, senderNumber, basicUserInfo.user_type, userCourseSubjects, staffList);
         if (typeof serviceRequested === 'object') {
           if (userAcademicRecords[serviceRequested.itemRequested] !== 'N' && serviceRequested.serviceRequested === 'add') {
+            console.log('testing here adding rejetion');
             serviceRequested.rejection = true;
-            return
+            return;
           } else if (userAcademicRecords[serviceRequested.itemRequested] !== 'C' && serviceRequested.serviceRequested === 'remove') {
             serviceRequested.rejection = true;
-            return
+            console.log('testing here removing rejetion');
+            return;
           }
           config.database = 'requests';
           let mydb = new Database(config);

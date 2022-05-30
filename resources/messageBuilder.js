@@ -72,7 +72,11 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           'Thank you for using our services';
       } else if (serviceRequested.rejection === true) {
         messageText =
-          'Apolgies, the subject you have entered is not available to ' +
+          'Apolgies, the subject, ' +
+          serviceRequested.itemRequested +
+          ': ' +
+          diction[serviceRequested.itemRequested] +
+          ', you have entered is not available to ' +
           serviceRequested.serviceRequested +
           '.\n' +
           'Kindly make sure you have typed in the correct subject code or choose a subject that is *available to ' +
