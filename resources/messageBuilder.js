@@ -73,9 +73,9 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
       } else if (serviceRequested.rejection === true) {
         messageText =
           'Apolgies, the subject, ' +
-          serviceRequested.itemRequested +
+          serviceRequested.itemRequested.toUppCase() +
           ': ' +
-          diction[serviceRequested.itemRequested] +
+          diction[serviceRequested.itemRequested.toUppCase()] +
           ', you have entered is not available to ' +
           serviceRequested.serviceRequested +
           '.\n' +

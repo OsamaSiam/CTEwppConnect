@@ -132,7 +132,7 @@ function textAnalysis(text, senderNumber, userType, subjects, staffList) {
           if (_2ndTestingTextArray.length > 0) {
             result = {
               serviceRequested: result,
-              itemRequested: _2ndTestingTextArray[0],
+              itemRequested: _2ndTestingTextArray[0].toUpperCase(),
               recorded: false,
             };
           }
