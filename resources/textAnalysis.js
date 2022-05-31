@@ -74,7 +74,7 @@ var letterRequestKeywords = [
   'إفادة',
   'افادة',
 ];
-var listKeywords = ['list'];
+var listKeywords = ['list', 'pending'];
 var wordLists = [
   greetingsKeywords,
   addingkeywords,

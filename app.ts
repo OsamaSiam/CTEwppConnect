@@ -35,6 +35,7 @@ function start(client) {
     let userAcademicRecords, userCourseSubjects;
     let staffRecords;
     let staffList = [];
+    let requestsData;
     mydb.query(str_sql)
       .then(rows => {
         basicUserInfo = rows[0];
@@ -158,8 +159,12 @@ function start(client) {
           console.log(rows.affectedRows + ' record(s) updated');
           serviceRequested.recorded = true;
           serviceRequested.requestID = rows.insertId;
+        } else if (rows !== undefined && message.body.match('#')) {
+          requestsData = rows[0];
+        } else if (rows !== undefined && serviceRequested.serviceRequested === 'list') {
+          requestsData = rows;
         }
-        return writeMessage(serviceRequested, basicUserInfo, additionalUserInfo, userAcademicRecords, userCourseSubjects);
+        return writeMessage(serviceRequested, basicUserInfo, additionalUserInfo, userAcademicRecords, userCourseSubjects, requestsData);
       })
       .then(messageText => {
         let messageToBeSent = null;
