@@ -82,14 +82,39 @@ function start(client) {
         }
         serviceRequested = analyzeText(message.body, senderNumber, basicUserInfo.user_type, userCourseSubjects, staffList);
         if (typeof serviceRequested === 'object') {
+          let subjectData = require('./resources/subjectsData.js');
+          let subjectPrerequiste = subjectData.data['subjectPrerequiste'];
           if (userAcademicRecords[serviceRequested.itemRequested] !== 'N' && serviceRequested.serviceRequested === 'add') {
-            console.log('testing here adding rejetion');
             serviceRequested.rejection = true;
+            if (userAcademicRecords[serviceRequested.itemRequested] === 'P') {
+              serviceRequested.rejectReason = 'the subject is passed.';
+            } else if (userAcademicRecords[serviceRequested.itemRequested] === 'C') {
+              serviceRequested.rejectReason = 'the subject is already registered';
+            }
             return;
           } else if (userAcademicRecords[serviceRequested.itemRequested] !== 'C' && serviceRequested.serviceRequested === 'remove') {
             serviceRequested.rejection = true;
-            console.log('testing here removing rejetion');
+            serviceRequested.rejectReason = 'the subject is not currently registered';
             return;
+          } else if (subjectPrerequiste[serviceRequested.itemRequested]) {
+            if (typeof subjectPrerequiste[serviceRequested.itemRequested] === 'object') {
+              let subjectsPassed = 0;
+              let specificSubjectReq = subjectPrerequiste[serviceRequested.itemRequested];
+              for ( let i = 0; Object.values(specificSubjectReq).length > i; i++) {
+                if (userAcademicRecords[specificSubjectReq[i]] === 'P') {
+                  subjectsPassed++;
+                }
+              }
+              if (Object.values(specificSubjectReq).length !== subjectsPassed) {
+                serviceRequested.rejection = true;
+                serviceRequested.rejectReason = 'all or some subject requirements have not been met';
+                return;
+              }
+            } else if (userAcademicRecords[subjectPrerequiste[serviceRequested.itemRequested]] !== 'P') {
+                serviceRequested.rejection = true;
+                serviceRequested.rejectReason = 'the subject requirement has not been met';
+                return;
+            }
           }
           config.database = 'requests';
           let mydb = new Database(config);
