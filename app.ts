@@ -152,11 +152,11 @@ function start(client) {
           } else if(serviceRequested.serviceRequested === 'list') {
             if (basicUserInfo.user_type === 'trainee') {
               record_sql =
-                'SELECT * FROM record WHERE status = ' + serviceRequested.criteriaRequested + ' AND trainee_ID = ' +
+                "SELECT * FROM record WHERE status = '" + serviceRequested.criteriaRequested + "' AND trainee_ID = " +
                 basicUserInfo.college_ID;
             } else if (basicUserInfo.user_type === 'staff') {
               record_sql =
-                'SELECT * FROM record WHERE status = ' + serviceRequested.criteriaRequested + ' AND group_ID = ' +
+                "SELECT * FROM record WHERE status = '" + serviceRequested.criteriaRequested + "' AND group_ID = " +
                 additionalUserInfo.manage_group_ID;
             }
           } else if (['add', 'remove'].includes(serviceRequested.serviceRequested)) {

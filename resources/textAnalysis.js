@@ -126,7 +126,7 @@ function textAnalysis(text, senderNumber, userType, subjects, staffList) {
         result = groupedKeywords[0];
         if (result === 'add' || result === 'remove' || result === 'list') {
           let _2ndTestingTextArray = text2ndKeywords.filter(x => {
-            if (result = 'list') {
+            if (result === 'list') {
               return ['pending', 'approved', 'completed'].includes(x);
             } else {
             x = x.toUpperCase();
