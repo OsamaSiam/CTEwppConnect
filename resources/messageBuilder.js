@@ -103,6 +103,10 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           // additional data like student info
           // add buttons to approve or deny message
         }
+      } else if (serviceRequested.serviceRequested === 'list') {
+        console.log('testing here msgBld L202 list pending', serviceRequested);
+        messageText =
+          'Your current pending requests for approval are below: \n' + requestsData;
       }
       resolve(messageText);
     } else if (['add', 'remove'].includes(serviceRequested)) {
@@ -182,11 +186,6 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
         '*Letter of Indication*\n' +
         '*Exams Letter*';
       resolve(messageText);
-    } else if (serviceRequested.serviceRequested === 'list') {
-      console.log('testing here msgBld L202 list pending', serviceRequested);
-      messageText =
-        'Your current pending requests for approval are below: \n' + requestsData;
-        resolve(messageText);
     } else {
       if (serviceRequested === 'greeting') {
         messageText =
