@@ -86,7 +86,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           '* \n Its status is: *' +
           requestsData.status +
           '* \n';
-          if (requestsData.status === 'Pending'){
+          if (requestsData.status === 'pending'){
             messageText = messageText.concat('it is still pending approval from the *Academic Advisor*')
           } else if (requestsData.status === 'Approved') {
             messageText = messageText.concat('it was approved on *', requestsData.updated_timestamp, '* \nNow, changes requested are pending implementation by the Timetabler.')

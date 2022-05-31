@@ -74,7 +74,7 @@ var letterRequestKeywords = [
   'إفادة',
   'افادة',
 ];
-var listKeywords = ['list', 'pending'];
+var listKeywords = ['list'];
 var wordLists = [
   greetingsKeywords,
   addingkeywords,
@@ -124,17 +124,28 @@ function textAnalysis(text, senderNumber, userType, subjects, staffList) {
         let text2ndKeywords = textKeywords;
         textKeywords = testingTextArray;
         result = groupedKeywords[0];
-        if (result === 'add' || result === 'remove') {
+        if (result === 'add' || result === 'remove' || result === 'list') {
           let _2ndTestingTextArray = text2ndKeywords.filter(x => {
+            if (result = 'list') {
+              return ['pending', 'approved', 'completed'].includes(x);
+            } else {
             x = x.toUpperCase();
             return subjects.includes(x);
+            }
           });
           if (_2ndTestingTextArray.length > 0) {
-            result = {
-              serviceRequested: result,
-              itemRequested: _2ndTestingTextArray[0].toUpperCase(),
-              recorded: false,
-            };
+            if (result !== 'list') {
+              result = {
+                serviceRequested: result,
+                itemRequested: _2ndTestingTextArray[0].toUpperCase(),
+                recorded: false,
+              };
+            } else if (result === 'list') {
+              result = {
+                serviceRequested: result,
+                criteriaRequested: _2ndTestingTextArray[0],
+              };
+            }
           }
         }
         console.log('You were trying to ' + result.toString() + ' by using these keywords: ' + textKeywords);

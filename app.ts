@@ -128,11 +128,11 @@ function start(client) {
                 serviceRequested.itemRequested;
             } else if (serviceRequested.serviceRequested == 'approve' && additionalUserInfo.role === 'advisor') {
               record_sql =
-                'UPDATE record SET status = Approved, staff_pending = timetabler WHERE request_id = ' +
+                'UPDATE record SET status = approved, staff_pending = timetabler WHERE request_id = ' +
                 serviceRequested.itemRequested;
             } else if (serviceRequested.serviceRequested == 'approve' && additionalUserInfo.role === 'timetabler') {
               record_sql =
-                'UPDATE record SET status = Completed, staff_pending = NULL WHERE request_id = ' +
+                'UPDATE record SET status = completed, staff_pending = NULL WHERE request_id = ' +
                 serviceRequested.itemRequested;
             } else if (serviceRequested.serviceRequested == 'requestInfo') {
               if (basicUserInfo.user_type === 'trainee') {
@@ -149,14 +149,14 @@ function start(client) {
                   serviceRequested.itemRequested;
               }
             }
-          } else if(serviceRequested === 'list') {
+          } else if(serviceRequested.serviceRequested === 'list') {
             if (basicUserInfo.user_type === 'trainee') {
               record_sql =
-                'SELECT * FROM record WHERE status = Pending AND trainee_ID = ' +
+                'SELECT * FROM record WHERE status = ' + serviceRequested.criteriaRequested + ' AND trainee_ID = ' +
                 basicUserInfo.college_ID;
             } else if (basicUserInfo.user_type === 'staff') {
               record_sql =
-                'SELECT * FROM record WHERE status = Pending AND group_ID = ' +
+                'SELECT * FROM record WHERE status = ' + serviceRequested.criteriaRequested + ' AND group_ID = ' +
                 additionalUserInfo.manage_group_ID;
             }
           } else if (['add', 'remove'].includes(serviceRequested.serviceRequested)) {
