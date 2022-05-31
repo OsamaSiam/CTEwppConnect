@@ -82,8 +82,8 @@ function start(client) {
         }
         serviceRequested = analyzeText(message.body, senderNumber, basicUserInfo.user_type, userCourseSubjects, staffList);
         if (typeof serviceRequested === 'object') {
-          let subjectData = require('./resources/subjectsData.js');
-          let subjectPrerequiste = subjectData.data['subjectPrerequiste'];
+          let {subjectsData} = require('./resources/subjectsData.js');
+          let subjectPrerequiste = subjectsData['subjectPrerequiste'];
           if (userAcademicRecords[serviceRequested.itemRequested] !== 'N' && serviceRequested.serviceRequested === 'add') {
             serviceRequested.rejection = true;
             if (userAcademicRecords[serviceRequested.itemRequested] === 'P') {
