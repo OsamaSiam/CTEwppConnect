@@ -61,9 +61,9 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           diction[serviceRequested.itemRequested] +
           '*, you have entered is not available to ' +
           serviceRequested.serviceRequested +
-          ' becuase ' +
+          ' becuase *' +
           serviceRequested.rejectReason +
-          '.\nKindly make sure you have typed in the correct subject code or choose a subject that is *available to ' +
+          '*.\nKindly make sure you have typed in the correct subject code or choose a subject that is *available to ' +
           serviceRequested.serviceRequested +
           '*.\nKindly send your request again.';
       } else if (serviceRequested.recorded === false) {
@@ -186,6 +186,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
       console.log('testing here msgBld L202 list pending', serviceRequested);
       messageText =
         'Your current pending for approval requests below: \n' + requestsData;
+        resolve(messageText);
     } else {
       if (serviceRequested === 'greeting') {
         messageText =

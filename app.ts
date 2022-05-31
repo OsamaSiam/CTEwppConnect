@@ -87,7 +87,7 @@ function start(client) {
           if (userAcademicRecords[serviceRequested.itemRequested] !== 'N' && serviceRequested.serviceRequested === 'add') {
             serviceRequested.rejection = true;
             if (userAcademicRecords[serviceRequested.itemRequested] === 'P') {
-              serviceRequested.rejectReason = 'the subject is passed.';
+              serviceRequested.rejectReason = 'the subject has been completed';
             } else if (userAcademicRecords[serviceRequested.itemRequested] === 'C') {
               serviceRequested.rejectReason = 'the subject is already registered';
             }
@@ -112,7 +112,7 @@ function start(client) {
               }
             } else if (userAcademicRecords[subjectPrerequiste[serviceRequested.itemRequested]] !== 'P') {
                 serviceRequested.rejection = true;
-                serviceRequested.rejectReason = 'the subject requirement has not been met';
+                serviceRequested.rejectReason = 'the subject requirement has not been met yet';
                 return;
             }
           }
