@@ -140,26 +140,26 @@ function start(client) {
                   'SELECT * FROM record WHERE trainee_ID = ' +
                   basicUserInfo.college_ID +
                   ' AND request_id = ' +
-                  serviceRequested.itemRequested +
-                  ' LIMIT 10 ORDER BY request_id ASC';
+                  serviceRequested.itemRequested;
               } else if (basicUserInfo.user_type === 'staff') {
                 record_sql =
                   'SELECT * FROM record WHERE group_ID = ' +
                   additionalUserInfo.manage_group_ID +
                   ' AND request_id = ' +
-                  serviceRequested.itemRequested +
-                  ' LIMIT 10 ORDER BY request_id ASC';
+                  serviceRequested.itemRequested;
               }
             }
           } else if(serviceRequested.serviceRequested === 'list') {
             if (basicUserInfo.user_type === 'trainee') {
               record_sql =
                 "SELECT * FROM record WHERE status = '" + serviceRequested.criteriaRequested + "' AND trainee_ID = " +
-                basicUserInfo.college_ID;
+                basicUserInfo.college_ID +
+                ' ORDER BY request_id ASC LIMIT 10';
             } else if (basicUserInfo.user_type === 'staff') {
               record_sql =
                 "SELECT * FROM record WHERE status = '" + serviceRequested.criteriaRequested + "' AND group_ID = " +
-                additionalUserInfo.manage_group_ID;
+                additionalUserInfo.manage_group_ID +
+                ' ORDER BY request_id ASC LIMIT 10';
             }
           } else if (['add', 'remove'].includes(serviceRequested.serviceRequested)) {
             record_sql =
