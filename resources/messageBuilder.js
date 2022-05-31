@@ -114,11 +114,36 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           'Apoliges for any inconvience caused.';
       } else if (serviceRequested.serviceRequested === 'requestInfo') {
         console.log('testing here msgBld L116 request info:', serviceRequested);
-        messageText =
-          'Your request #' +
+        if (requestsData !== undefined) {
+          messageText =
+          'Your request *#' +
           serviceRequested.itemRequested +
-          '\n' +
-          requestsData;
+          '* to *' +
+          requestsData.request_type +
+          ' ' +
+          requestsData.item_requested +
+          ': ' +
+          diction[requestsData.item_requested] +
+          '* \n Its status is: *' +
+          requestsData.status +
+          '* \n';
+          if (requestsData.status === 'Pending'){
+            messageText = messageText.concat('it is still pending approval from the *Academic Advisor*')
+          } else if (requestsData.status === 'Approved') {
+            messageText = messageText.concat('it was approved on *', requestsData.updated_timestamp, '* \nNow, changes requested are pending implementation by the Timetabler.')
+          } else if (requestsData.status === 'Completed') {
+            messageText = messageText.concat('it was completed on ', requestsData.updated_timestamp)
+          }
+        } else {
+          messageText =
+          'The request *#' +
+          serviceRequested.itemRequested +
+          '* either does not exist or is not registered under your ID\n Please make sure you are entering the correct (#) request number, or type in *List Pending* to see all your pending requests.';
+        }
+        if (basicInfo.user_type === 'staff') {
+          // additional data like student info
+          // add buttons to approve or deny message
+        }
       }
       resolve(messageText);
     } else if (['add', 'remove'].includes(serviceRequested)) {
