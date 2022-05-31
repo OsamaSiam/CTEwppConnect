@@ -1,4 +1,4 @@
-let subjectData = require('./resources/subjectsData.js');
+const subjectData = require('./resources/subjectsData.js');
 let diction = subjectData.data['diction'];
 let subjectPrerequiste = subjectData.data['subjectPrerequiste'];
 
