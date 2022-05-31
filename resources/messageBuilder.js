@@ -1,6 +1,7 @@
 const subjectsData = require('./resources/subjectsData.js');
-let diction = subjectsData['diction'];
-let subjectPrerequiste = subjectsData['subjectPrerequiste'];
+let data = subejctsData();
+let diction = data['diction'];
+let subjectPrerequiste = data['subjectPrerequiste'];
 
 function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRecords, subjects, requestsData) {
   return new Promise(resolve => {
