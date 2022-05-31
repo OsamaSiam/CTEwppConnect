@@ -115,8 +115,8 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
       } else if (serviceRequested.serviceRequested === 'requestInfo') {
         console.log('testing here msgBld L116 request info:', serviceRequested);
         messageText =
-          'here your request #' +
-          serviceRequested.requestID +
+          'Your request #' +
+          serviceRequested.itemRequested +
           '\n' +
           requestsData;
       }
