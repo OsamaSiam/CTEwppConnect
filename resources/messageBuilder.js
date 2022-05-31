@@ -182,7 +182,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
         '*Letter of Indication*\n' +
         '*Exams Letter*';
       resolve(messageText);
-    } else if (serviceRequested === 'list') {
+    } else if (serviceRequested.serviceRequested === 'list') {
       console.log('testing here msgBld L202 list pending', serviceRequested);
       messageText =
         'Your current pending requests for approval are below: \n' + requestsData;

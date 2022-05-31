@@ -146,8 +146,12 @@ function textAnalysis(text, senderNumber, userType, subjects, staffList) {
                 criteriaRequested: _2ndTestingTextArray[0],
               };
             }
-          }
-        }
+          } else if (result === 'list') {
+            result = {
+              serviceRequested: result,
+              criteriaRequested: 'pending',
+            };
+          } 
         console.log('You were trying to ' + result.toString() + ' by using these keywords: ' + textKeywords);
         break;
       }
