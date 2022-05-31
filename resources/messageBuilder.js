@@ -1,6 +1,6 @@
 let diction = {
   MATH301: 'Mathematics-1',
-  PHYS301: 'ppphysics',
+  PHYS301: 'Physics',
   ENGL301: 'Enlish Language-1',
   INSA312: 'Basic Networks System Administration',
   INSA351: 'Networ Technologies 1',
@@ -78,22 +78,22 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
       // this is if the add/remove request is correct and logged
       if (serviceRequested.recorded === true) {
         if (serviceRequested.requestID === 0) {
-          messageText = 
-          'You already have pending request to ' +
-          serviceRequested.serviceRequested +
-          'The subject, *' +
-          serviceRequested.itemRequested +
-          ': ' +
-          diction[serviceRequested.itemRequested] +
-          '*.\n Kindly send *List* to check pending requests.';
+          messageText =
+            'You already have pending request to ' +
+            serviceRequested.serviceRequested +
+            ' the requested subject, *' +
+            serviceRequested.itemRequested +
+            ': ' +
+            diction[serviceRequested.itemRequested] +
+            '*.\n Kindly send *List* to check pending requests.';
         } else {
           messageText =
-          'Your request ID: *' +
-          serviceRequested.requestID +
-          '* has been recorded in our system.\n' +
-          'Kindly allow for some time to pass for approval.\n' +
-          'You can check on the status of your request by typing (#) followed by the request ID.\n' +
-          'Thank you for using our services';
+            'Your request ID: *' +
+            serviceRequested.requestID +
+            '* has been recorded in our system.\n' +
+            'Kindly allow for some time to pass for approval.\n' +
+            'You can check on the status of your request by typing (#) followed by the request ID.\n' +
+            'Thank you for using our services';
         }
       } else if (serviceRequested.rejection === true) {
         messageText =
@@ -130,18 +130,20 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
       for (let i = 1; i < subjects.length; i++) {
         if (academicRecords[subjects[i]] === academicFilterChar) {
           if (academicFilterChar === 'N') {
-            if(typeof subjectPrerequiste[subjects[i]] === 'object') {
+            if (typeof subjectPrerequiste[subjects[i]] === 'object') {
               let subjectsPassed = 0;
               let specificSubjectReq = subjectPrerequiste[subjects[i]];
-              for( let i = 0; Object.values(specificSubjectReq).length > i; i++) {
-                  if (academicRecords[specificSubjectReq[i]] === 'P') {
-                      subjectsPassed++;
-                  }
+              for ( let i = 0; Object.values(specificSubjectReq).length > i; i++) {
+                if (academicRecords[specificSubjectReq[i]] === 'P') {
+                  subjectsPassed++;
+                }
               }
               if (Object.values(specificSubjectReq).length === subjectsPassed) {
-                  filteredAcademicRecords.push(subjects[i]);
+                filteredAcademicRecords.push(subjects[i]);
               }
-            } else if (academicRecords[subjectPrerequiste[subjects[i]]] === 'P') {
+            } else if (subjectPrerequiste[subjects[i]] === 'string' && academicRecords[subjectPrerequiste[subjects[i]]] === 'P') {
+              filteredAcademicRecords.push(subjects[i]);
+            } else {
               filteredAcademicRecords.push(subjects[i]);
             }
           } else {
