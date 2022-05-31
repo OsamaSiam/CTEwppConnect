@@ -44,4 +44,4 @@ let subjectPrerequiste = {
     INSA492: ['INSA371', 'INSA452', 'INSA454', 'INSA483']
   }
 
-module.exports.data = {diction, subjectPrerequiste};
+module.exports = {diction, subjectPrerequiste};
