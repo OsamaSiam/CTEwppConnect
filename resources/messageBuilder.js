@@ -1,5 +1,5 @@
-const subjectsData = require('./resources/subjectsData.js');
-let data = subejctsData();
+const subjectsDataMod = require('./resources/subjectsData.js');
+let data = subjectsDataMod();
 let diction = data['diction'];
 let subjectPrerequiste = data['subjectPrerequiste'];
 
