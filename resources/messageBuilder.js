@@ -107,7 +107,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
         console.log('testing here msgBld L202 list pending', serviceRequested);
         messageText =
           'Your current pending requests for approval are below: \n';
-        if (requestsData.length() > 0) {
+        if (requestsData !== []) {
           messageText = messageText.concat(requestsData.toString());
         } else {
           messageText = messageText.concat('There is no *', serviceRequested.criteriaRequested, ' request* for you.');
