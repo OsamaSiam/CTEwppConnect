@@ -143,7 +143,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
               }
             } else if (subjectPrerequiste[subjects[i]] === 'string' && academicRecords[subjectPrerequiste[subjects[i]]] === 'P') {
               filteredAcademicRecords.push(subjects[i]);
-            } else {
+            } else if (academicRecords[subjectPrerequiste[subjects[i]]] === undefined) {
               filteredAcademicRecords.push(subjects[i]);
             }
           } else {
