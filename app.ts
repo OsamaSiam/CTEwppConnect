@@ -140,13 +140,15 @@ function start(client) {
                   'SELECT * FROM record WHERE trainee_ID = ' +
                   basicUserInfo.college_ID +
                   ' AND request_id = ' +
-                  serviceRequested.itemRequested;
+                  serviceRequested.itemRequested +
+                  ' LIMIT 10 ORDER BY request_id ASC';
               } else if (basicUserInfo.user_type === 'staff') {
                 record_sql =
                   'SELECT * FROM record WHERE group_ID = ' +
                   additionalUserInfo.manage_group_ID +
                   ' AND request_id = ' +
-                  serviceRequested.itemRequested;
+                  serviceRequested.itemRequested +
+                  ' LIMIT 10 ORDER BY request_id ASC';
               }
             }
           } else if(serviceRequested.serviceRequested === 'list') {

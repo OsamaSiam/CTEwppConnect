@@ -149,7 +149,7 @@ function textAnalysis(text, senderNumber, userType, subjects, staffList) {
           } if (result === 'list') {
             result = {
               serviceRequested: result,
-              criteriaRequested: _2ndTestingTextArray[0],
+              criteriaRequested:'pending',
             };
           }
         }
