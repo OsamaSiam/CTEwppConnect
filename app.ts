@@ -186,10 +186,10 @@ function start(client) {
           serviceRequested.requestID = rows.insertId;
         } else if (rows !== undefined && message.body.match('#')) {
           requestsData = rows[0];
-          console.log('testing here app L164 raw data from sql:', rows);
-          console.log('testing here app L165 data from sql:', requestsData);
         } else if (rows !== undefined && serviceRequested.serviceRequested === 'list') {
           requestsData = rows;
+          console.log('testing here app L164 raw data from sql:', rows);
+          console.log('testing here app L165 data from sql:', requestsData);
         }
         return writeMessage(serviceRequested, basicUserInfo, additionalUserInfo, userAcademicRecords, userCourseSubjects, requestsData);
       })

@@ -185,7 +185,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
     } else if (serviceRequested === 'list') {
       console.log('testing here msgBld L202 list pending', serviceRequested);
       messageText =
-        'Your current pending for approval requests below: \n' + requestsData;
+        'Your current pending requests for approval are below: \n' + requestsData;
         resolve(messageText);
     } else {
       if (serviceRequested === 'greeting') {
