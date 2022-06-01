@@ -104,7 +104,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
         }
         if (basicInfo.user_type === 'staff') {
           messageText = messageText.concat('\nRequested by ', requestsData.trainee_name, ', ', requestsData.trainee_ID)
-          var advancedMessag = {
+          var advancedMessage = {
             messageText: messageText,
             messageButtons: {
               useTemplateButtons: true,
@@ -123,6 +123,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
               footer: 'Requested on ' + requestsData.request_timestamp,
             },
           };
+          resolve(advancedMessage);
         }
       } else if (serviceRequested.serviceRequested === 'list') {
         console.log('testing here msgBld L202 list pending', serviceRequested);
@@ -144,10 +145,8 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
       let academicFilterChar;
       let filteredAcademicRecords = [];
       if (serviceRequested === 'add') {
-        // filter query result to subjects not finished
         academicFilterChar = 'N';
       } else {
-        // filter query result to subjects currently studying
         academicFilterChar = 'C';
       }
       for (let i = 1; i < subjects.length; i++) {
