@@ -137,8 +137,8 @@ function textAnalysis(text, senderNumber, userType, subjects, staffList) {
             if (result === 'list') {
               return ['pending', 'approved', 'rejected', 'completed'].includes(x);
             } else {
-            x = x.toUpperCase();
-            return subjects.includes(x);
+              x = x.toUpperCase();
+              return subjects.includes(x);
             }
           });
           if (_2ndTestingTextArray.length > 0) {
@@ -154,10 +154,11 @@ function textAnalysis(text, senderNumber, userType, subjects, staffList) {
                 criteriaRequested: _2ndTestingTextArray[0],
               };
             }
-          } if (result === 'list') {
+          }
+          if (result === 'list') {
             result = {
               serviceRequested: result,
-              criteriaRequested:'pending',
+              criteriaRequested: 'pending',
             };
           }
         }

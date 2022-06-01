@@ -75,17 +75,17 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
         console.log('testing here msgBld L116 request info:', serviceRequested);
         if (requestsData !== undefined) {
           messageText =
-          'Your request *#' +
-          serviceRequested.itemRequested +
-          '* to *' +
-          requestsData.request_type +
-          ' ' +
-          requestsData.item_requested +
-          ': ' +
-          diction[requestsData.item_requested] +
-          '* \nstatus is: *' +
-          requestsData.status +
-          '* \n';
+            'The request *#' +
+            serviceRequested.itemRequested +
+            '* to *' +
+            requestsData.request_type +
+            ' ' +
+            requestsData.item_requested +
+            ': ' +
+            diction[requestsData.item_requested] +
+            '* \nstatus is: *' +
+            requestsData.status +
+            '* \n';
           if (requestsData.status === 'pending'){
             messageText = messageText.concat('it is still pending approval from the *Academic Advisor*')
           } else if (requestsData.status === 'rejected') {
@@ -97,13 +97,34 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           }
         } else {
           messageText =
-          'The request *#' +
-          serviceRequested.itemRequested +
-          '* either does not exist or is not registered under your ID\n Please make sure you are entering the correct (#) request number, or type in *List Pending* to see all your pending requests.';
+            'The request *#' +
+            serviceRequested.itemRequested +
+            '* either does not exist or is not registered under your ID\n Please make sure you are entering the correct (#) request number, or type in *List Pending* to see all your pending requests.';
+          resolve(messageText);
         }
         if (basicInfo.user_type === 'staff') {
           // additional data like student info
+          messageText = messageText.concat('\nRequested by ', requestsData.trainee_name, ', ', trainee_ID)
           // add buttons to approve or deny message
+          var advancedMessag = {
+            messageText: messageText,
+            messageButtons: {
+              useTemplateButtons: true,
+              buttons: [
+                {
+                  id: 'approve',
+                  text: 'Approve #' + requestsData.request_id,
+                },
+                {
+                  id: 'reject',
+                  text: 'Reject #' + requestsData.request_id,
+                },
+              ],
+              title:
+                requestsData.request_type + ' ' + requestsData.item_requested,
+              footer: 'Requested on ' + requestsData.request_timestamp,
+            }
+          };
         }
       } else if (serviceRequested.serviceRequested === 'list') {
         console.log('testing here msgBld L202 list pending', serviceRequested);
