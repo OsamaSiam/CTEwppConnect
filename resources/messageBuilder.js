@@ -83,7 +83,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           requestsData.item_requested +
           ': ' +
           diction[requestsData.item_requested] +
-          '* \n Its status is: *' +
+          '* \nstatus is: *' +
           requestsData.status +
           '* \n';
           if (requestsData.status === 'pending'){
