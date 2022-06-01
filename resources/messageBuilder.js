@@ -206,10 +206,18 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
       } else if (serviceRequested === 'unknown') {
         messageText = 'Sorry, I could not understand what you have typed.\n';
       }
-      messageText = messageText.concat(
-        'We offer the following services:\n *Add subjects* \n *Remove subjects* \n *Contact staff* \n *Request letter* \n' +
-          'To use any of the services, kindly reply with one of the text listed above'
-      );
+      if (basicInfo.user_type === 'trainee') {
+        messageText = messageText.concat(
+          'We offer the following services:\n *Add subjects* \n *Remove subjects* \n *Contact staff* \n *Request letter* \n',
+          'To use any of the services, kindly reply with one of the text listed above and if you would like to see the list just say hi to us anytime.\n\n'
+        );
+      } else if (basicInfo.user_type === 'staff') {
+        messageText = messageText.concat(
+          "This service can be used recieve trainees' requests and help in resolving these requests \n" +
+            'To check if there is any pending requests for you, kindly send: \n *List pending*' +
+            'To check and resolve requests, kindly send: \n *#[request number]* e.g #3 or #340 \n'
+        );
+      }
       resolve(messageText);
     }
     return messageText;

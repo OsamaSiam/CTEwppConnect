@@ -128,15 +128,15 @@ function start(client) {
             console.log('hello1 : ', serviceRequested);
             if(serviceRequested.serviceRequested === 'reject'){
               record_sql =
-                'UPDATE record SET status = rejected WHERE request_id = ' +
+                "UPDATE record SET status = 'rejected' WHERE request_id = " +
                 serviceRequested.itemRequested;
             } else if (serviceRequested.serviceRequested == 'approve' && additionalUserInfo.role === 'advisor') {
               record_sql =
-                'UPDATE record SET status = approved, staff_pending = timetabler WHERE request_id = ' +
+                "UPDATE record SET status = 'approved', staff_pending = timetabler WHERE request_id = " +
                 serviceRequested.itemRequested;
             } else if (serviceRequested.serviceRequested == 'approve' && additionalUserInfo.role === 'timetabler') {
               record_sql =
-                'UPDATE record SET status = completed, staff_pending = NULL WHERE request_id = ' +
+                "UPDATE record SET status = 'completed', staff_pending = NULL WHERE request_id = " +
                 serviceRequested.itemRequested;
             } else if (serviceRequested.serviceRequested == 'requestInfo') {
               if (basicUserInfo.user_type === 'trainee') {
