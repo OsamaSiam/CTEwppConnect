@@ -188,8 +188,10 @@ function start(client) {
           serviceRequested.requestID = rows.insertId;
         } else if (rows !== undefined && message.body.match('#')) {
           requestsData = rows[0];
-          requestsData.request_timestamp = requestsData.request_timestamp.toString().split('\\.', 5)[1];
-          requestsData.update_timestamp = requestsData.update_timestamp.toString().split('\\.', 5)[1];
+          console.log('testing here app timestamp Pre L191:', requestsData.update_timestamp);
+          requestsData.request_timestamp = requestsData.request_timestamp.toString().split('\\.', 5)[0];
+          requestsData.update_timestamp = requestsData.update_timestamp.toString().split('\\.', 5)[0];
+          console.log('testing here app timestamp after L194:', requestsData.update_timestamp);
         } else if (rows !== undefined && serviceRequested.serviceRequested === 'list') {
           requestsData = rows;
           console.log('testing here app L164 raw data from sql:', rows);
