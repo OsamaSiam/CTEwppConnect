@@ -89,11 +89,11 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           if (requestsData.status === 'pending'){
             messageText = messageText.concat('it is still pending approval from the *Academic Advisor*')
           } else if (requestsData.status === 'rejected') {
-            messageText = messageText.concat('it was rejected on *', requestsData.updated_timestamp, '* \nPlease contact the ', requestsData.staff_pending, ' to overtrun the decision.')
+            messageText = messageText.concat('it was rejected on *', requestsData.update_timestamp, '* \nPlease contact the *', requestsData.staff_pending, '* to overtrun the decision.')
           } else if (requestsData.status === 'approved') {
-            messageText = messageText.concat('it was approved on *', requestsData.updated_timestamp, '* \nNow, changes requested are pending implementation by the Timetabler.')
+            messageText = messageText.concat('it was approved on *', requestsData.update_timestamp, '* \nNow, changes requested are pending implementation by the Timetabler.')
           } else if (requestsData.status === 'completed') {
-            messageText = messageText.concat('it was completed on ', requestsData.updated_timestamp)
+            messageText = messageText.concat('it was completed on ', requestsData.update_timestamp)
           }
         } else {
           messageText =
