@@ -205,9 +205,15 @@ function start(client) {
           if (serviceRequested.serviceRequested === 'requestinfo') {
             console.log('testing here app timestamp Pre L191:', requestsData.update_timestamp);
             requestsData.request_timestamp = requestsData.request_timestamp.toString().split('\\.', 5)[0];
+<<<<<<< HEAD
             requestsData.request_timestamp = requestsData.request_timestamp.replace('GMT+0300 (Arabian Standard Time)','');
             requestsData.update_timestamp = requestsData.update_timestamp.toString().split('\\.', 5)[0];
             requestsData.update_timestamp = requestsData.update_timestamp.replace('GMT+0300 (Arabian Standard Time)','');
+=======
+            requestsData.request_timestamp = requestsData.request_timestamp.replace('GMT+0300 (Arabian Standard Time','');
+            requestsData.update_timestamp = requestsData.update_timestamp.toString().split('\\.', 5)[0];
+            requestsData.update_timestamp = requestsData.update_timestamp.replace('GMT+0300 (Arabian Standard Time','');
+>>>>>>> 651beb58c8c0a28b0f808ae7aa511e15f4f73e05
             console.log('testing here app timestamp after L194:', requestsData.update_timestamp);
           } else if (serviceRequested.serviceRequested === 'approve' || serviceRequested.serviceRequested === 'reject') {
             serviceRequested.requestUpdated = true;
