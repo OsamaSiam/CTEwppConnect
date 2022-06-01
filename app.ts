@@ -211,10 +211,11 @@ function start(client) {
       .then(messageText => {
         let messageToBeSent = null;
         messageToBeSent = messageText;
+        console.log('testing here advanced messaging L214 @ app: ', typeof messageToBeSent);
         if (messageToBeSent !== null) {
           if (typeof messageToBeSent === 'object') {
             console.log('testing here advanced messaging L216 @ app: ', messageToBeSent);
-            console.log('testing here advanced messaging L216 @ app: ', messageToBeSent.messageButtons);
+            console.log('testing here advanced messaging L217 @ app: ', messageToBeSent.messageButtons);
             client
               .sendText(
                 message.from,
