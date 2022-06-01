@@ -106,9 +106,11 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
       } else if (serviceRequested.serviceRequested === 'list') {
         console.log('testing here msgBld L202 list pending', serviceRequested);
         messageText =
-          'Your current ' + serviceRequested.criteriaRequested + ' requests for approval are below: \n';
+          'Your *' + serviceRequested.criteriaRequested + ' requests* are below, kindly type *#Request-ID* to get the details of the request: \n';
         if (requestsData[0] !== undefined) {
-          messageText = messageText.concat(JSON.stringify(requestsData));
+          for ( let i = 0; i < requestsData.length; i++) {
+            messageText = messageText.concat('ID :#', requestsData[i].request_id, ', ', requestsData[i].request_type, ' ', requestsData[i].item_requested, ' by ', requestsData[i].trainee_ID, '.\n');
+          }
         } else {
           messageText = messageText.concat('There is no *', serviceRequested.criteriaRequested, ' request* for you.');
         }
