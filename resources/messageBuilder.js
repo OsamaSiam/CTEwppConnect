@@ -153,6 +153,8 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
         //   messageText = 'The request #' + serviceRequested.itemRequested + ' has been successfuly approved and updated';
         // }
         messageText = 'The request #' + serviceRequested.itemRequested + ' has been successfuly updated';
+      } else if (serviceRequested.requestUpdated === false) {
+        messageText = 'Aplogies, the request could not be updated .\nPlease make sure the request #' + serviceRequested.itemRequested + ' is valid and has not been closed';
       }
       resolve(messageText);
     } else if (['add', 'remove'].includes(serviceRequested)) {
