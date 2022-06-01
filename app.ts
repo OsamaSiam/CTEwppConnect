@@ -191,7 +191,7 @@ function start(client) {
         } else if (rows !== undefined && serviceRequested.serviceRequested === 'list') {
           requestsData = rows[0];
           console.log('testing here app L164 raw data from sql:', rows);
-          console.log('testing here app L165 data from sql:', requestsData[0]);
+          console.log('testing here app L165 data from sql:', requestsData);
         }
         return writeMessage(serviceRequested, basicUserInfo, additionalUserInfo, userAcademicRecords, userCourseSubjects, requestsData);
       })
