@@ -85,36 +85,38 @@ function start(client) {
           let subjectsData = require('./resources/subjectsData.js');
           let subjectPrerequiste = subjectsData['subjectPrerequiste'];
           console.log('testing here app L87');
-          if (userAcademicRecords[serviceRequested.itemRequested] !== 'N' && serviceRequested.serviceRequested === 'add') {
-            serviceRequested.rejection = true;
-            if (userAcademicRecords[serviceRequested.itemRequested] === 'P') {
-              serviceRequested.rejectReason = 'the subject has been completed';
-            } else if (userAcademicRecords[serviceRequested.itemRequested] === 'C') {
-              serviceRequested.rejectReason = 'the subject is already registered';
-            }
-            return;
-          } else if (userAcademicRecords[serviceRequested.itemRequested] !== 'C' && serviceRequested.serviceRequested === 'remove') {
-            serviceRequested.rejection = true;
-            serviceRequested.rejectReason = 'the subject is not currently registered';
-            return;
-          } else if (subjectPrerequiste[serviceRequested.itemRequested]) {
-            if (typeof subjectPrerequiste[serviceRequested.itemRequested] === 'object') {
-              let subjectsPassed = 0;
-              let specificSubjectReq = subjectPrerequiste[serviceRequested.itemRequested];
-              for ( let i = 0; Object.values(specificSubjectReq).length > i; i++) {
-                if (userAcademicRecords[specificSubjectReq[i]] === 'P') {
-                  subjectsPassed++;
+          if (basicUserInfo.user_type === 'trainee') {
+            if (userAcademicRecords[serviceRequested.itemRequested] !== 'N' && serviceRequested.serviceRequested === 'add') {
+              serviceRequested.rejection = true;
+              if (userAcademicRecords[serviceRequested.itemRequested] === 'P') {
+                serviceRequested.rejectReason = 'the subject has been completed';
+              } else if (userAcademicRecords[serviceRequested.itemRequested] === 'C') {
+                serviceRequested.rejectReason = 'the subject is already registered';
+              }
+              return;
+            } else if (userAcademicRecords[serviceRequested.itemRequested] !== 'C' && serviceRequested.serviceRequested === 'remove') {
+              serviceRequested.rejection = true;
+              serviceRequested.rejectReason = 'the subject is not currently registered';
+              return;
+            } else if (subjectPrerequiste[serviceRequested.itemRequested]) {
+              if (typeof subjectPrerequiste[serviceRequested.itemRequested] === 'object') {
+                let subjectsPassed = 0;
+                let specificSubjectReq = subjectPrerequiste[serviceRequested.itemRequested];
+                for ( let i = 0; Object.values(specificSubjectReq).length > i; i++) {
+                  if (userAcademicRecords[specificSubjectReq[i]] === 'P') {
+                    subjectsPassed++;
+                  }
                 }
+                if (Object.values(specificSubjectReq).length !== subjectsPassed) {
+                  serviceRequested.rejection = true;
+                  serviceRequested.rejectReason = 'all or some subject requirements have not been met';
+                  return;
+                }
+              } else if (userAcademicRecords[subjectPrerequiste[serviceRequested.itemRequested]] !== 'P') {
+                  serviceRequested.rejection = true;
+                  serviceRequested.rejectReason = 'the subject requirement has not been met yet';
+                  return;
               }
-              if (Object.values(specificSubjectReq).length !== subjectsPassed) {
-                serviceRequested.rejection = true;
-                serviceRequested.rejectReason = 'all or some subject requirements have not been met';
-                return;
-              }
-            } else if (userAcademicRecords[subjectPrerequiste[serviceRequested.itemRequested]] !== 'P') {
-                serviceRequested.rejection = true;
-                serviceRequested.rejectReason = 'the subject requirement has not been met yet';
-                return;
             }
           }
           console.log('testing here app L120');
