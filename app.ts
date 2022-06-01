@@ -84,6 +84,7 @@ function start(client) {
         if (typeof serviceRequested === 'object') {
           let subjectsData = require('./resources/subjectsData.js');
           let subjectPrerequiste = subjectsData['subjectPrerequiste'];
+          console.log('testing here app L87');
           if (userAcademicRecords[serviceRequested.itemRequested] !== 'N' && serviceRequested.serviceRequested === 'add') {
             serviceRequested.rejection = true;
             if (userAcademicRecords[serviceRequested.itemRequested] === 'P') {
@@ -116,6 +117,7 @@ function start(client) {
                 return;
             }
           }
+          console.log('testing here app L120');
           config.database = 'requests';
           let mydb = new Database(config);
           let record_sql;
@@ -156,6 +158,7 @@ function start(client) {
                 basicUserInfo.college_ID +
                 ' ORDER BY request_id ASC LIMIT 10';
             } else if (basicUserInfo.user_type === 'staff') {
+              console.log('testing here app L159 list sql:', r);
               record_sql =
                 "SELECT * FROM record WHERE status = '" + serviceRequested.criteriaRequested + "' AND group_ID = " +
                 additionalUserInfo.manage_group_ID +
@@ -190,9 +193,9 @@ function start(client) {
           requestsData = rows[0];
           console.log('testing here app timestamp Pre L191:', requestsData.update_timestamp);
           requestsData.request_timestamp = requestsData.request_timestamp.toString().split('\\.', 5)[0];
-          requestsData.request_timestamp = requestsData.request_timestamp.split(' ', 5);
+          requestsData.request_timestamp = requestsData.request_timestamp.split(' ', 5).toString();
           requestsData.update_timestamp = requestsData.update_timestamp.toString().split('\\.', 5)[0];
-          requestsData.update_timestamp = requestsData.update_timestamp.split(' ', 5);
+          requestsData.update_timestamp = requestsData.update_timestamp.split(' ', 5).toString();
           console.log('testing here app timestamp after L194:', requestsData.update_timestamp);
         } else if (rows !== undefined && serviceRequested.serviceRequested === 'list') {
           requestsData = rows;

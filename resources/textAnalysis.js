@@ -107,6 +107,11 @@ function textAnalysis(text, senderNumber, userType, subjects, staffList) {
             serviceRequested: 'reject',
             itemRequested: requestNumber,
           };
+        } else {
+          result = {
+            serviceRequested: 'requestInfo',
+            itemRequested: requestNumber,
+          };
         }
       } else {
         result = {
