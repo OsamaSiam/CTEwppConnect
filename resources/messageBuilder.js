@@ -104,7 +104,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
         }
         if (basicInfo.user_type === 'staff') {
           // additional data like student info
-          messageText = messageText.concat('\nRequested by ', requestsData.trainee_name, ', ', trainee_ID)
+          messageText = messageText.concat('\nRequested by ', requestsData.trainee_name, ', ', requestData.trainee_ID)
           // add buttons to approve or deny message
           var advancedMessag = {
             messageText: messageText,
