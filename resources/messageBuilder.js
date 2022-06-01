@@ -124,8 +124,8 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
                 footer: 'Requested on ' + requestsData.request_timestamp,
               },
             };
+            resolve(advancedMessage);
           }
-          resolve(advancedMessage);
         }
       } else if (serviceRequested.serviceRequested === 'list') {
         console.log('testing here msgBld L202 list pending', serviceRequested);
