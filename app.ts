@@ -128,21 +128,21 @@ function start(client) {
             console.log('hello1 : ', serviceRequested);
             if(serviceRequested.serviceRequested === 'reject'){
               record_sql =
-                "UPDATE record SET status = 'rejected' WHERE request_id = '" +
+                "UPDATE record SET status = 'rejected', update_timestamp = NOW() WHERE request_id = '" +
                 serviceRequested.itemRequested +
                 "' AND EXISTS (SELECT request_id FROM record WHERE status = 'pending' AND request_id = '" +
                 serviceRequested.itemRequested +
                 "');";
             } else if (serviceRequested.serviceRequested == 'approve' && additionalUserInfo.role === 'advisor') {
               record_sql =
-                "UPDATE record SET status = 'approved', staff_pending = 'timetabler' WHERE request_id = '" +
+                "UPDATE record SET status = 'approved', staff_pending = 'timetabler', update_timestamp = NOW() WHERE request_id = '" +
                 serviceRequested.itemRequested +
                 "' AND EXISTS (SELECT request_id FROM record WHERE status = 'pending' AND request_id = '" +
                 serviceRequested.itemRequested +
                 "');";
             } else if (serviceRequested.serviceRequested == 'approve' && additionalUserInfo.role === 'timetabler') {
               record_sql =
-                "UPDATE record SET status = 'completed', staff_pending = NULL WHERE request_id = '" +
+                "UPDATE record SET status = 'completed', staff_pending = NULL, update_timestamp = NOW() WHERE request_id = '" +
                 serviceRequested.itemRequested +
                 "' AND NOT EXISTS (SELECT request_id FROM record WHERE status = 'approved' AND request_id = '" +
                 serviceRequested.itemRequested +
@@ -177,19 +177,19 @@ function start(client) {
             }
           } else if (['add', 'remove'].includes(serviceRequested.serviceRequested)) {
             record_sql =
-              "INSERT INTO record ( request_type, item_requested, trainee_ID, trainee_name, group_ID, request_timestamp, reason, reply_reason) SELECT '" +
+              "INSERT INTO record ( request_type, item_requested, trainee_ID, trainee_name, group_ID, request_timestamp) SELECT '" +
               serviceRequested.serviceRequested + "', '" +
               serviceRequested.itemRequested + "', '" +
               additionalUserInfo.academic_ID + "', '" +
               additionalUserInfo.ENfirst_name + ' ' + additionalUserInfo.ENlast_name + "', '" +
               additionalUserInfo.group_ID + "', " +
-              "NOW(), 'reasons', NULL WHERE NOT EXISTS ( SELECT request_id FROM record WHERE status = 'pending' AND request_type = '" +
+              "NOW() WHERE NOT EXISTS ( SELECT request_id FROM record WHERE status = 'pending' AND request_type = '" +
               serviceRequested.serviceRequested +
               "' AND item_requested = '" +
               serviceRequested.itemRequested +
               "' AND trainee_ID = '" +
               additionalUserInfo.academic_ID +
-              "' );"; // variable reasons of request from trainee should inserted
+              "' );";
           }
           console.log('testing recoer sql: ', record_sql);
           return mydb.query(record_sql);
@@ -209,7 +209,7 @@ function start(client) {
             requestsData.update_timestamp = requestsData.update_timestamp.toString().split('\\.', 5)[0];
             requestsData.update_timestamp = requestsData.update_timestamp.replace('GMT+0300 (Arabian Standard Time)',' ');
             console.log('testing here app timestamp after L194:', requestsData.update_timestamp);
-          } else if (serviceRequested.serviceRequested === 'approve' || serviceRequested.serviceRequested === 'reject') {
+          } else if ((serviceRequested.serviceRequested === 'approve' || serviceRequested.serviceRequested === 'reject') && requestsData.affectedRows === 0) {
             console.log('testing here app @ 213 check =ing row', rows);
             serviceRequested.requestUpdated = true;
             // suggestion create flow to send the timetabler if current role is advisor
