@@ -15,10 +15,10 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
         );
       } else if (basicInfo.user_type === 'staff') {
         messageText = messageText.concat(
-          "This service can be used recieve trainees' requests and help in resolving these requests \n" +
-            'To check if there is any pending requests for you, kindly send: \n *List pending*' +
+          "This service can be used to recieve trainees' requests and help in resolving these requests \n" +
+            'To check if there is any pending requests for you, kindly send: \n *List pending* \n' +
             'To check and resolve requests, kindly send: \n *#[request number]* e.g #3 or #340 \n' +
-            'By default, You are currently unregsitered in our system. To be able to receive request notification automatically, please send: \n *register*\n\n'
+            'By default, You are currently unregsitered in our system. To be able to receive request notification automatically, please send: \n *register*\n'
         );
       }
       messageText =
@@ -213,8 +213,8 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
         );
       } else if (basicInfo.user_type === 'staff') {
         messageText = messageText.concat(
-          "This service can be used recieve trainees' requests and help in resolving these requests \n" +
-            'To check if there is any pending requests for you, kindly send: \n *List pending*' +
+          "This service can be used to recieve trainees' requests and help in resolving these requests \n" +
+            'To check if there is any pending requests for you, kindly send: \n *List pending* \n' +
             'To check and resolve requests, kindly send: \n *#[request number]* e.g #3 or #340 \n'
         );
       }

@@ -101,11 +101,14 @@ function textAnalysis(text, senderNumber, userType, subjects, staffList) {
           result = {
             serviceRequested: 'approve',
             itemRequested: requestNumber,
+            requestUpdated: false,
+            recordUpdated: false,
           };
         } else if (textKeywords.includes('reject')) {
           result = {
             serviceRequested: 'reject',
             itemRequested: requestNumber,
+            requestUpdated: false,
           };
         } else {
           result = {
