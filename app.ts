@@ -212,14 +212,25 @@ function start(client) {
         let messageToBeSent = null;
         messageToBeSent = messageText;
         if (messageToBeSent !== null) {
-          client
-            .sendText(message.from, messageToBeSent)
-            .then((result) => {
-              console.log(message.from, ' Result sent'); //return object success
-            })
-            .catch((erro) => {
-              console.error('Error when sending: ', erro); //return object error
-            });
+          if (typeof messageToBeSent === 'object') {
+            client
+              .sendText(message.from, messageToBeSent.messageText, messageToBeSent.messageButtons)
+              .then((result) => {
+                console.log(message.from, ' Result sent'); //return object success
+              })
+              .catch((erro) => {
+                console.error('Error when sending: ', erro); //return object error
+              });
+          } else {
+            client
+              .sendText(message.from, messageToBeSent)
+              .then((result) => {
+                console.log(message.from, ' Result sent'); //return object success
+              })
+              .catch((erro) => {
+                console.error('Error when sending: ', erro); //return object error
+              });
+          }
         }
         if (!basicUserInfo.intro) {
           let str_sql =

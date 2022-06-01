@@ -103,9 +103,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           resolve(messageText);
         }
         if (basicInfo.user_type === 'staff') {
-          // additional data like student info
-          messageText = messageText.concat('\nRequested by ', requestsData.trainee_name, ', ', requestData.trainee_ID)
-          // add buttons to approve or deny message
+          messageText = messageText.concat('\nRequested by ', requestsData.trainee_name, ', ', requestsData.trainee_ID)
           var advancedMessag = {
             messageText: messageText,
             messageButtons: {
@@ -123,7 +121,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
               title:
                 requestsData.request_type + ' ' + requestsData.item_requested,
               footer: 'Requested on ' + requestsData.request_timestamp,
-            }
+            },
           };
         }
       } else if (serviceRequested.serviceRequested === 'list') {
