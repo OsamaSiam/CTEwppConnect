@@ -119,7 +119,7 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
                 },
               ],
               title:
-                requestsData.request_type + ' ' + requestsData.item_requested,
+                requestsData.request_type.toUpperCase() + ' ' + requestsData.item_requested,
               footer: 'Requested on ' + requestsData.request_timestamp,
             },
           };
@@ -131,11 +131,28 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           'Your *' + serviceRequested.criteriaRequested + ' requests* are below, kindly type *#Request-ID* to get the details of the request: \n';
         if (requestsData[0] !== undefined) {
           for ( let i = 0; i < requestsData.length; i++) {
-            messageText = messageText.concat('ID :#', requestsData[i].request_id, ', ', requestsData[i].request_type, ' ', requestsData[i].item_requested, ' by ', requestsData[i].trainee_ID, '.\n');
+            messageText = messageText.concat(
+              'ID :#',
+              requestsData[i].request_id,
+              ', ',
+              requestsData[i].request_type,
+              ' ',
+              requestsData[i].item_requested,
+              ' by ',
+              requestsData[i].trainee_ID,
+              '.\n'
+            );
           }
         } else {
           messageText = messageText.concat('There is no *', serviceRequested.criteriaRequested, ' request* for you.');
         }
+      } else if (serviceRequested.requestUpdated === true) {
+        // if (additionalInfo.role === 'advisor') {
+        //   messageText = 'The request #' + serviceRequested.itemRequested + ' has been successfuly approved and updated';
+        // } else if (additionalInfo.role === 'timetabler') {
+        //   messageText = 'The request #' + serviceRequested.itemRequested + ' has been successfuly approved and updated';
+        // }
+        messageText = 'The request #' + serviceRequested.itemRequested + ' has been successfuly updated';
       }
       resolve(messageText);
     } else if (['add', 'remove'].includes(serviceRequested)) {

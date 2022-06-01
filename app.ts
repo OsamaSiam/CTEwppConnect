@@ -153,7 +153,7 @@ function start(client) {
                   serviceRequested.itemRequested;
               }
             }
-          } else if(serviceRequested.serviceRequested === 'list') {
+          } else if (serviceRequested.serviceRequested === 'list') {
             if (basicUserInfo.user_type === 'trainee') {
               record_sql =
                 "SELECT * FROM record WHERE status = '" + serviceRequested.criteriaRequested + "' AND trainee_ID = " +
@@ -200,6 +200,10 @@ function start(client) {
             requestsData.update_timestamp = requestsData.update_timestamp.toString().split('\\.', 5).replace('GMT+0300 (Arabian Standard Time','')[0];
             // requestsData.update_timestamp = requestsData.update_timestamp;
             console.log('testing here app timestamp after L194:', requestsData.update_timestamp);
+          } else if (serviceRequested.serviceRequested === 'approve' || serviceRequested.serviceRequested === 'reject') {
+            serviceRequested.requestUpdated = true;
+            // suggestion create flow to send the timetabler if current role is advisor
+            // suggestion if current role timetabler send query to update trainee academic records
           }
         } else if (rows !== undefined && serviceRequested.serviceRequested === 'list') {
           requestsData = rows;
