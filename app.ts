@@ -158,7 +158,7 @@ function start(client) {
                 basicUserInfo.college_ID +
                 ' ORDER BY request_id ASC LIMIT 10';
             } else if (basicUserInfo.user_type === 'staff') {
-              console.log('testing here app L159 list sql:', r);
+              console.log('testing here app L159');
               record_sql =
                 "SELECT * FROM record WHERE status = '" + serviceRequested.criteriaRequested + "' AND group_ID = " +
                 additionalUserInfo.manage_group_ID +
