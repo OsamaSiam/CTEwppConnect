@@ -213,8 +213,14 @@ function start(client) {
         messageToBeSent = messageText;
         if (messageToBeSent !== null) {
           if (typeof messageToBeSent === 'object') {
+            console.log('testing here advanced messaging L216 @ app: ', messageToBeSent);
+            console.log('testing here advanced messaging L216 @ app: ', messageToBeSent.messageButtons);
             client
-              .sendText(message.from, messageToBeSent.messageText, messageToBeSent.messageButtons)
+              .sendText(
+                message.from,
+                messageToBeSent.messageText,
+                messageToBeSent.messageButtons
+              )
               .then((result) => {
                 console.log(message.from, ' Result sent'); //return object success
               })
