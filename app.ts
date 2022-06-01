@@ -115,7 +115,7 @@ function start(client) {
               } else if (userAcademicRecords[subjectPrerequiste[serviceRequested.itemRequested]] !== 'P') {
                   serviceRequested.rejection = true;
                   serviceRequested.rejectReason = 'the subject requirement has not been met yet';
-                  return;
+                return;
               }
             }
           }
@@ -132,21 +132,21 @@ function start(client) {
                 serviceRequested.itemRequested +
                 "AND EXISTS (SELECT request_id FROM record WHERE status = 'pending' AND request_id = '" +
                 serviceRequested.itemRequested +
-                "')";
+                "');";
             } else if (serviceRequested.serviceRequested == 'approve' && additionalUserInfo.role === 'advisor') {
               record_sql =
                 "UPDATE record SET status = 'approved', staff_pending = timetabler WHERE request_id = " +
                 serviceRequested.itemRequested +
                 "AND EXISTS (SELECT request_id FROM record WHERE status = 'pending' AND request_id = '" +
                 serviceRequested.itemRequested +
-                "')";
+                "');";
             } else if (serviceRequested.serviceRequested == 'approve' && additionalUserInfo.role === 'timetabler') {
               record_sql =
                 "UPDATE record SET status = 'completed', staff_pending = NULL WHERE request_id = " +
                 serviceRequested.itemRequested +
                 "AND NOT EXISTS (SELECT request_id FROM record WHERE status = 'approved' AND request_id = '" +
                 serviceRequested.itemRequested +
-                "')";
+                "');";
             } else if (serviceRequested.serviceRequested == 'requestInfo') {
               if (basicUserInfo.user_type === 'trainee') {
                 record_sql =
@@ -205,9 +205,9 @@ function start(client) {
           if (serviceRequested.serviceRequested === 'requestinfo') {
             console.log('testing here app timestamp Pre L191:', requestsData.update_timestamp);
             requestsData.request_timestamp = requestsData.request_timestamp.toString().split('\\.', 5)[0];
-            // requestsData.request_timestamp = requestsData.request_timestamp.replace('GMT+0300 (Arabian Standard Time','');
+            requestsData.request_timestamp = requestsData.request_timestamp.replace('GMT+0300 (Arabian Standard Time','');
             requestsData.update_timestamp = requestsData.update_timestamp.toString().split('\\.', 5)[0];
-            // requestsData.update_timestamp = requestsData.update_timestamp.replace('GMT+0300 (Arabian Standard Time','');
+            requestsData.update_timestamp = requestsData.update_timestamp.replace('GMT+0300 (Arabian Standard Time','');
             console.log('testing here app timestamp after L194:', requestsData.update_timestamp);
           } else if (serviceRequested.serviceRequested === 'approve' || serviceRequested.serviceRequested === 'reject') {
             serviceRequested.requestUpdated = true;
