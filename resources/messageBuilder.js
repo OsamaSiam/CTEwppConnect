@@ -104,25 +104,27 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
         }
         if (basicInfo.user_type === 'staff') {
           messageText = messageText.concat('\nRequested by ', requestsData.trainee_name, ', ', requestsData.trainee_ID)
-          var advancedMessage = {
-            messageText: messageText,
-            messageButtons: {
-              useTemplateButtons: true,
-              buttons: [
-                {
-                  id: 'approve',
-                  text: 'Approve #' + requestsData.request_id,
-                },
-                {
-                  id: 'reject',
-                  text: 'Reject #' + requestsData.request_id,
-                },
-              ],
-              title:
-                requestsData.request_type.toUpperCase() + ' ' + requestsData.item_requested,
-              footer: 'Requested on ' + requestsData.request_timestamp,
-            },
-          };
+          if (requestsData.status === 'pending' || (requestsData.status === 'approved' && additionalInfo.role === 'timetabler')) {
+            var advancedMessage = {
+              messageText: messageText,
+              messageButtons: {
+                useTemplateButtons: true,
+                buttons: [
+                  {
+                    id: 'approve',
+                    text: 'Approve #' + requestsData.request_id,
+                  },
+                  {
+                    id: 'reject',
+                    text: 'Reject #' + requestsData.request_id,
+                  },
+                ],
+                title:
+                  requestsData.request_type.toUpperCase() + ' ' + requestsData.item_requested,
+                footer: 'Requested on ' + requestsData.request_timestamp,
+              },
+            };
+          }
           resolve(advancedMessage);
         }
       } else if (serviceRequested.serviceRequested === 'list') {
