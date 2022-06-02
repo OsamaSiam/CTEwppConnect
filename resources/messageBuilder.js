@@ -10,13 +10,15 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
         'Welcome to College of Telecom and Elctornics Whatsapp trainees service platform.\n'
       if (basicInfo.user_type === 'trainee') {
         messageText = messageText.concat(
-          'We offer the following services:\n *Add subjects* \n *Remove subjects* \n *Contact staff* \n *Request letter* \n',
+          'We offer the following services:\n *Add subjects* \n *Remove subjects* \n',
+          'To check if there is any pending, completed, rejected, or approved requests for you, kindly send *List* followed by one of the *status*: \n e.g. *List pending* \n' +
+          'To check and resolve requests, kindly send: \n *#[request number]* e.g #3 or #340 \n' +
           'To use any of the services, kindly reply with one of the text listed above and if you would like to see the list just say hi to us anytime.\n\n'
         );
       } else if (basicInfo.user_type === 'staff') {
         messageText = messageText.concat(
           "This service can be used to recieve trainees' requests and help in resolving these requests \n" +
-            'To check if there is any pending requests for you, kindly send: \n *List pending* \n' +
+            'To check if there is any pending, completed, rejected, or approved requests for you, kindly send *List* followed by one of the *status*: \n e.g. *List pending* \n' +
             'To check and resolve requests, kindly send: \n *#[request number]* e.g #3 or #340 \n' +
             'By default, You are currently unregsitered in our system. To be able to receive request notification automatically, please send: \n *register*\n'
         );
@@ -245,8 +247,10 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
       }
       if (basicInfo.user_type === 'trainee') {
         messageText = messageText.concat(
-          'We offer the following services:\n *Add subjects* \n *Remove subjects* \n *Contact staff* \n *Request letter* \n',
-          'To use any of the services, kindly reply with one of the text listed above and if you would like to see the list just say hi to us anytime.\n\n'
+          'We offer the following services:\n *Add subjects* \n *Remove subjects* \n',
+          'To check if there is any pending, completed, rejected, or approved requests for you, kindly send *List* followed by one of the *status*: \n e.g. *List pending* \n' +
+            'To check and resolve requests, kindly send: \n *#[request number]* e.g #3 or #340 \n' +
+          'To use any of the services, kindly reply with one of the text listed above and if you would like to see the list just say hi to us anytime.\n'
         );
       } else if (basicInfo.user_type === 'staff') {
         messageText = messageText.concat(
