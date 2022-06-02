@@ -56,7 +56,6 @@ function start(client) {
           let mydb = new Database(config);
           return mydb.query(str_sql);
         } else if (basicUserInfo.user_type === 'staff') {
-          // maybe skip to text analayzer?
           return;
         }
       })
@@ -84,7 +83,6 @@ function start(client) {
         if (typeof serviceRequested === 'object') {
           let subjectsData = require('./resources/subjectsData.js');
           let subjectPrerequiste = subjectsData['subjectPrerequiste'];
-          console.log('testing here app L87');
           if (basicUserInfo.user_type === 'trainee') {
             if (userAcademicRecords[serviceRequested.itemRequested] !== 'N' && serviceRequested.serviceRequested === 'add') {
               serviceRequested.rejection = true;
@@ -119,13 +117,11 @@ function start(client) {
               }
             }
           }
-          console.log('testing here app L120');
           config.database = 'requests';
           let mydb = new Database(config);
           let record_sql;
           // check if there any current exact pending requests by sedning  conditional query and used that query result in reply
           if (serviceRequested.itemRequested > 0) {
-            console.log('hello1 : ', serviceRequested);
             if(serviceRequested.serviceRequested === 'reject'){
               record_sql =
                 "UPDATE record SET status = 'rejected', update_timestamp = NOW() WHERE request_id = '" +
@@ -169,7 +165,6 @@ function start(client) {
                 basicUserInfo.college_ID +
                 ' ORDER BY request_id ASC LIMIT 10';
             } else if (basicUserInfo.user_type === 'staff') {
-              console.log('testing here app L159');
               record_sql =
                 "SELECT * FROM record WHERE status = '" + serviceRequested.criteriaRequested + "' AND group_ID = " +
                 additionalUserInfo.manage_group_ID +
@@ -191,7 +186,6 @@ function start(client) {
               additionalUserInfo.academic_ID +
               "' );";
           }
-          console.log('testing recoer sql: ', record_sql);
           return mydb.query(record_sql);
         }
       })
@@ -203,33 +197,25 @@ function start(client) {
         } else if (rows !== undefined && message.body.match('#')) {
           requestsData = rows[0];
           if (serviceRequested.serviceRequested === 'requestinfo') {
-            console.log('testing here app timestamp Pre L191:', requestsData.update_timestamp);
             requestsData.request_timestamp = requestsData.request_timestamp.toString().split('\\.', 5)[0];
             requestsData.request_timestamp = requestsData.request_timestamp.replace('GMT+0300 (Arabian Standard Time)',' ');
             requestsData.update_timestamp = requestsData.update_timestamp.toString().split('\\.', 5)[0];
             requestsData.update_timestamp = requestsData.update_timestamp.replace('GMT+0300 (Arabian Standard Time)',' ');
-            console.log('testing here app timestamp after L194:', requestsData.update_timestamp);
           } else if ((serviceRequested.serviceRequested === 'approve' || serviceRequested.serviceRequested === 'reject') && requestsData.affectedRows === 0) {
-            console.log('testing here app @ 213 check =ing row', rows);
             serviceRequested.requestUpdated = true;
             // suggestion create flow to send the timetabler if current role is advisor
             // suggestion if current role timetabler send query to update trainee academic records
           }
         } else if (rows !== undefined && serviceRequested.serviceRequested === 'list') {
           requestsData = rows;
-          console.log('testing here app L164 raw data from sql:', rows);
-          console.log('testing here app L165 data from sql:', requestsData);
         }
         return writeMessage(serviceRequested, basicUserInfo, additionalUserInfo, userAcademicRecords, userCourseSubjects, requestsData);
       })
       .then(messageText => {
         let messageToBeSent = null;
         messageToBeSent = messageText;
-        console.log('testing here advanced messaging L214 @ app: ', typeof messageToBeSent);
         if (messageToBeSent !== null) {
           if (typeof messageToBeSent === 'object') {
-            console.log('testing here advanced messaging L216 @ app: ', messageToBeSent);
-            console.log('testing here advanced messaging L217 @ app: ', messageToBeSent.messageButtons);
             client
               .sendText(
                 message.from,

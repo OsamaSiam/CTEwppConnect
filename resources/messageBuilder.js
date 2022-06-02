@@ -72,7 +72,6 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           'Kindly send your request again.\n' +
           'Apoliges for any inconvience caused.';
       } else if (serviceRequested.serviceRequested === 'requestInfo') {
-        console.log('testing here msgBld L116 request info:', serviceRequested);
         if (requestsData !== undefined) {
           messageText =
             'The request *#' +
@@ -128,7 +127,6 @@ function messageBuilder(serviceRequested, basicInfo, additionalInfo, academicRec
           }
         }
       } else if (serviceRequested.serviceRequested === 'list') {
-        console.log('testing here msgBld L202 list pending', serviceRequested);
         messageText =
           'Your *' + serviceRequested.criteriaRequested + ' requests* are below, kindly type *#Request-ID* to get the details of the request: \n';
         if (requestsData[0] !== undefined) {
