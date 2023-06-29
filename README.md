@@ -1,3 +1,5 @@
+Used for Uni Prject, not maintained.
+
 # WPPConnect 📞
 
 ![WPPConnect Banner](./img/wppconnect-banner.jpeg)
